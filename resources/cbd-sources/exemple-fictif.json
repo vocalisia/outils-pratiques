@@ -1,0 +1,12 @@
+{
+  "records": [
+    {
+      "id": "pays-a",
+      "state": "OUTDATED"
+    },
+    {
+      "id": "pays-b",
+      "state": "MISSING"
+    }
+  ]
+}

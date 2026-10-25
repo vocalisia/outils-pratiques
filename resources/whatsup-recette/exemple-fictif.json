@@ -1,0 +1,16 @@
+{
+  "cases": [
+    {
+      "id": "message-incompris",
+      "status": "FAIL"
+    },
+    {
+      "id": "demande-humain",
+      "status": "PASS"
+    },
+    {
+      "id": "message-hors-sujet",
+      "status": "NOT_RUN"
+    }
+  ]
+}

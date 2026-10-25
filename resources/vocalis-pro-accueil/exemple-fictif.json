@@ -1,0 +1,16 @@
+{
+  "cases": [
+    {
+      "id": "intention-simple",
+      "status": "PASS"
+    },
+    {
+      "id": "nom-ambigue",
+      "status": "FAIL"
+    },
+    {
+      "id": "interruption",
+      "status": "NOT_RUN"
+    }
+  ]
+}

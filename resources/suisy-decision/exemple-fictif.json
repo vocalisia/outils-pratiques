@@ -1,0 +1,22 @@
+{
+  "options": [
+    {
+      "id": "option-a",
+      "scores": [
+        4,
+        2
+      ]
+    },
+    {
+      "id": "option-b",
+      "scores": [
+        3,
+        5
+      ]
+    }
+  ],
+  "weights": [
+    2,
+    1
+  ]
+}

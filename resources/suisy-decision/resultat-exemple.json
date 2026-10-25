@@ -1,0 +1,20 @@
+{
+  "engine": "weighted_matrix",
+  "example_type": "FICTIONAL_INPUTS_COMPUTED_OUTPUT",
+  "output": {
+    "highest_scoring_ids": [
+      "option-b"
+    ],
+    "scores": [
+      {
+        "id": "option-a",
+        "weighted_score": 3.333333
+      },
+      {
+        "id": "option-b",
+        "weighted_score": 3.666667
+      }
+    ],
+    "tie": false
+  }
+}

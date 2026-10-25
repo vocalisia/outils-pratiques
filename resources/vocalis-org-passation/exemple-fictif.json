@@ -1,0 +1,16 @@
+{
+  "cases": [
+    {
+      "id": "humain-demande",
+      "status": "PASS"
+    },
+    {
+      "id": "outil-indisponible",
+      "status": "FAIL"
+    },
+    {
+      "id": "appel-hors-horaires",
+      "status": "NOT_RUN"
+    }
+  ]
+}

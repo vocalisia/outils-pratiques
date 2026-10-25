@@ -1,0 +1,12 @@
+{
+  "records": [
+    {
+      "id": "ingredient-list",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "marketing-claim",
+      "state": "MISSING"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "engine": "trading_fees",
+  "example_type": "FICTIONAL_INPUTS_COMPUTED_OUTPUT",
+  "output": {
+    "custody": 24.0,
+    "order_fees": 48.0,
+    "total_fees": 72.0
+  }
+}

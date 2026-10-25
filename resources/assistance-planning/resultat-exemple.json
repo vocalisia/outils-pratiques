@@ -1,0 +1,8 @@
+{
+  "engine": "weekly_hours",
+  "example_type": "FICTIONAL_INPUTS_COMPUTED_OUTPUT",
+  "output": {
+    "weekly_hours": 4.75,
+    "weekly_minutes": 285.0
+  }
+}

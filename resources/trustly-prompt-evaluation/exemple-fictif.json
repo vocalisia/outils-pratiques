@@ -1,0 +1,16 @@
+{
+  "cases": [
+    {
+      "id": "format-check",
+      "status": "PASS"
+    },
+    {
+      "id": "edge-case",
+      "status": "FAIL"
+    },
+    {
+      "id": "repeatability",
+      "status": "NOT_RUN"
+    }
+  ]
+}

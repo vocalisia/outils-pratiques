@@ -1,0 +1,7 @@
+{
+  "amount_per_order": 1000,
+  "annual_custody": 24,
+  "fixed_fee": 3,
+  "orders": 12,
+  "proportional_rate": 0.001
+}

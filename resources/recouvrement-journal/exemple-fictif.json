@@ -1,0 +1,12 @@
+{
+  "records": [
+    {
+      "id": "facture",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "preuve-execution",
+      "state": "MISSING"
+    }
+  ]
+}

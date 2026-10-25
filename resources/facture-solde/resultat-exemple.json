@@ -1,0 +1,9 @@
+{
+  "engine": "invoice_balance",
+  "example_type": "FICTIONAL_INPUTS_COMPUTED_OUTPUT",
+  "output": {
+    "outstanding": 450.0,
+    "overpayment": 0,
+    "paid": 750.0
+  }
+}

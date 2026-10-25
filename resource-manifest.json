@@ -1,0 +1,428 @@
+{
+  "count": 35,
+  "fictional_examples": true,
+  "resources": [
+    {
+      "domain": "achetervoiture.be",
+      "engine": "car_budget",
+      "files": [
+        "resources/achetervoiture/exemple-fictif.json",
+        "resources/achetervoiture/modele.xlsx",
+        "resources/achetervoiture/README.md",
+        "resources/achetervoiture/resultat-exemple.json",
+        "resources/achetervoiture/trame.csv"
+      ],
+      "id": "achetervoiture"
+    },
+    {
+      "domain": "agentic-whatsup.com",
+      "engine": "test_summary",
+      "files": [
+        "resources/whatsup-recette/exemple-fictif.json",
+        "resources/whatsup-recette/modele.xlsx",
+        "resources/whatsup-recette/README.md",
+        "resources/whatsup-recette/resultat-exemple.json",
+        "resources/whatsup-recette/trame.csv"
+      ],
+      "id": "whatsup-recette"
+    },
+    {
+      "domain": "agents-ia.pro",
+      "engine": "evidence_summary",
+      "files": [
+        "resources/agents-ia-recette/exemple-fictif.json",
+        "resources/agents-ia-recette/modele.xlsx",
+        "resources/agents-ia-recette/README.md",
+        "resources/agents-ia-recette/resultat-exemple.json",
+        "resources/agents-ia-recette/trame.csv"
+      ],
+      "id": "agents-ia-recette"
+    },
+    {
+      "domain": "ai-due.com",
+      "engine": "time_comparison",
+      "files": [
+        "resources/ai-due-benchmark/exemple-fictif.json",
+        "resources/ai-due-benchmark/modele.xlsx",
+        "resources/ai-due-benchmark/README.md",
+        "resources/ai-due-benchmark/resultat-exemple.json",
+        "resources/ai-due-benchmark/trame.csv"
+      ],
+      "id": "ai-due-benchmark"
+    },
+    {
+      "domain": "anwbijoux.com",
+      "engine": "evidence_summary",
+      "files": [
+        "resources/anw-bijoux/exemple-fictif.json",
+        "resources/anw-bijoux/modele.xlsx",
+        "resources/anw-bijoux/README.md",
+        "resources/anw-bijoux/resultat-exemple.json",
+        "resources/anw-bijoux/trame.csv"
+      ],
+      "id": "anw-bijoux"
+    },
+    {
+      "domain": "assistanceseniors.ch",
+      "engine": "weekly_hours",
+      "files": [
+        "resources/assistance-planning/exemple-fictif.json",
+        "resources/assistance-planning/modele.xlsx",
+        "resources/assistance-planning/README.md",
+        "resources/assistance-planning/resultat-exemple.json",
+        "resources/assistance-planning/trame.csv"
+      ],
+      "id": "assistance-planning"
+    },
+    {
+      "domain": "boursier.be",
+      "engine": "trading_fees",
+      "files": [
+        "resources/boursier-be-frais/exemple-fictif.json",
+        "resources/boursier-be-frais/modele.xlsx",
+        "resources/boursier-be-frais/README.md",
+        "resources/boursier-be-frais/resultat-exemple.json",
+        "resources/boursier-be-frais/trame.csv"
+      ],
+      "id": "boursier-be-frais"
+    },
+    {
+      "domain": "boursier.ch",
+      "engine": "fee_difference",
+      "files": [
+        "resources/boursier-ch-ecart-frais/exemple-fictif.json",
+        "resources/boursier-ch-ecart-frais/modele.xlsx",
+        "resources/boursier-ch-ecart-frais/README.md",
+        "resources/boursier-ch-ecart-frais/resultat-exemple.json",
+        "resources/boursier-ch-ecart-frais/trame.csv"
+      ],
+      "id": "boursier-ch-ecart-frais"
+    },
+    {
+      "domain": "cbdeuropa.com",
+      "engine": "evidence_summary",
+      "files": [
+        "resources/cbd-sources/exemple-fictif.json",
+        "resources/cbd-sources/modele.xlsx",
+        "resources/cbd-sources/README.md",
+        "resources/cbd-sources/resultat-exemple.json",
+        "resources/cbd-sources/trame.csv"
+      ],
+      "id": "cbd-sources"
+    },
+    {
+      "domain": "epargne-suisse.ch",
+      "engine": "budget_gap",
+      "files": [
+        "resources/epargne-budget/exemple-fictif.json",
+        "resources/epargne-budget/modele.xlsx",
+        "resources/epargne-budget/README.md",
+        "resources/epargne-budget/resultat-exemple.json",
+        "resources/epargne-budget/trame.csv"
+      ],
+      "id": "epargne-budget"
+    },
+    {
+      "domain": "estimation-bien.ch",
+      "engine": "comparables",
+      "files": [
+        "resources/immo-comparables/exemple-fictif.json",
+        "resources/immo-comparables/modele.xlsx",
+        "resources/immo-comparables/README.md",
+        "resources/immo-comparables/resultat-exemple.json",
+        "resources/immo-comparables/trame.csv"
+      ],
+      "id": "immo-comparables"
+    },
+    {
+      "domain": "estimation-succession.ch",
+      "engine": "evidence_summary",
+      "files": [
+        "resources/succession-documents/exemple-fictif.json",
+        "resources/succession-documents/modele.xlsx",
+        "resources/succession-documents/README.md",
+        "resources/succession-documents/resultat-exemple.json",
+        "resources/succession-documents/trame.csv"
+      ],
+      "id": "succession-documents"
+    },
+    {
+      "domain": "iapmesuisse.ch",
+      "engine": "automation_balance",
+      "files": [
+        "resources/iapme-temps-net/exemple-fictif.json",
+        "resources/iapme-temps-net/modele.xlsx",
+        "resources/iapme-temps-net/README.md",
+        "resources/iapme-temps-net/resultat-exemple.json",
+        "resources/iapme-temps-net/trame.csv"
+      ],
+      "id": "iapme-temps-net"
+    },
+    {
+      "domain": "job-emploi.ch",
+      "engine": "application_summary",
+      "files": [
+        "resources/emploi-candidatures/exemple-fictif.json",
+        "resources/emploi-candidatures/modele.xlsx",
+        "resources/emploi-candidatures/README.md",
+        "resources/emploi-candidatures/resultat-exemple.json",
+        "resources/emploi-candidatures/trame.csv"
+      ],
+      "id": "emploi-candidatures"
+    },
+    {
+      "domain": "lead-gene.ch",
+      "engine": "qualification",
+      "files": [
+        "resources/leadgene-ch-qualification/exemple-fictif.json",
+        "resources/leadgene-ch-qualification/modele.xlsx",
+        "resources/leadgene-ch-qualification/README.md",
+        "resources/leadgene-ch-qualification/resultat-exemple.json",
+        "resources/leadgene-ch-qualification/trame.csv"
+      ],
+      "id": "leadgene-ch-qualification"
+    },
+    {
+      "domain": "lead-gene.com",
+      "engine": "funnel",
+      "files": [
+        "resources/leadgene-com-entonnoir/exemple-fictif.json",
+        "resources/leadgene-com-entonnoir/modele.xlsx",
+        "resources/leadgene-com-entonnoir/README.md",
+        "resources/leadgene-com-entonnoir/resultat-exemple.json",
+        "resources/leadgene-com-entonnoir/trame.csv"
+      ],
+      "id": "leadgene-com-entonnoir"
+    },
+    {
+      "domain": "master-seller.fr",
+      "engine": "test_summary",
+      "files": [
+        "resources/master-seller-demonstration/exemple-fictif.json",
+        "resources/master-seller-demonstration/modele.xlsx",
+        "resources/master-seller-demonstration/README.md",
+        "resources/master-seller-demonstration/resultat-exemple.json",
+        "resources/master-seller-demonstration/trame.csv"
+      ],
+      "id": "master-seller-demonstration"
+    },
+    {
+      "domain": "meilleurartisan.ch",
+      "engine": "quote_total",
+      "files": [
+        "resources/artisan-devis/exemple-fictif.json",
+        "resources/artisan-devis/modele.xlsx",
+        "resources/artisan-devis/README.md",
+        "resources/artisan-devis/resultat-exemple.json",
+        "resources/artisan-devis/trame.csv"
+      ],
+      "id": "artisan-devis"
+    },
+    {
+      "domain": "prix-m2-suisse.ch",
+      "engine": "evidence_summary",
+      "files": [
+        "resources/prix-m2-provenance/exemple-fictif.json",
+        "resources/prix-m2-provenance/modele.xlsx",
+        "resources/prix-m2-provenance/README.md",
+        "resources/prix-m2-provenance/resultat-exemple.json",
+        "resources/prix-m2-provenance/trame.csv"
+      ],
+      "id": "prix-m2-provenance"
+    },
+    {
+      "domain": "recouvrementpro.ca",
+      "engine": "evidence_summary",
+      "files": [
+        "resources/recouvrement-journal/exemple-fictif.json",
+        "resources/recouvrement-journal/modele.xlsx",
+        "resources/recouvrement-journal/README.md",
+        "resources/recouvrement-journal/resultat-exemple.json",
+        "resources/recouvrement-journal/trame.csv"
+      ],
+      "id": "recouvrement-journal"
+    },
+    {
+      "domain": "sante-lamal.ch",
+      "engine": "annual_scenario",
+      "files": [
+        "resources/lamal-scenario/exemple-fictif.json",
+        "resources/lamal-scenario/modele.xlsx",
+        "resources/lamal-scenario/README.md",
+        "resources/lamal-scenario/resultat-exemple.json",
+        "resources/lamal-scenario/trame.csv"
+      ],
+      "id": "lamal-scenario"
+    },
+    {
+      "domain": "seo-swiss.ch",
+      "engine": "html_audit",
+      "files": [
+        "resources/seo-swiss-html/exemple-fictif.json",
+        "resources/seo-swiss-html/modele.xlsx",
+        "resources/seo-swiss-html/README.md",
+        "resources/seo-swiss-html/resultat-exemple.json",
+        "resources/seo-swiss-html/trame.csv"
+      ],
+      "id": "seo-swiss-html"
+    },
+    {
+      "domain": "seo-true.com",
+      "engine": "sitemap_audit",
+      "files": [
+        "resources/seo-true-sitemap/exemple-fictif.json",
+        "resources/seo-true-sitemap/modele.xlsx",
+        "resources/seo-true-sitemap/README.md",
+        "resources/seo-true-sitemap/resultat-exemple.json",
+        "resources/seo-true-sitemap/trame.csv"
+      ],
+      "id": "seo-true-sitemap"
+    },
+    {
+      "domain": "stock-market.ch",
+      "engine": "fx_cost",
+      "files": [
+        "resources/stock-market-fx/exemple-fictif.json",
+        "resources/stock-market-fx/modele.xlsx",
+        "resources/stock-market-fx/README.md",
+        "resources/stock-market-fx/resultat-exemple.json",
+        "resources/stock-market-fx/trame.csv"
+      ],
+      "id": "stock-market-fx"
+    },
+    {
+      "domain": "suisy.ch",
+      "engine": "weighted_matrix",
+      "files": [
+        "resources/suisy-decision/exemple-fictif.json",
+        "resources/suisy-decision/modele.xlsx",
+        "resources/suisy-decision/README.md",
+        "resources/suisy-decision/resultat-exemple.json",
+        "resources/suisy-decision/trame.csv"
+      ],
+      "id": "suisy-decision"
+    },
+    {
+      "domain": "tesla-mag.ca",
+      "engine": "consumption",
+      "files": [
+        "resources/tesla-ca-consommation/exemple-fictif.json",
+        "resources/tesla-ca-consommation/modele.xlsx",
+        "resources/tesla-ca-consommation/README.md",
+        "resources/tesla-ca-consommation/resultat-exemple.json",
+        "resources/tesla-ca-consommation/trame.csv"
+      ],
+      "id": "tesla-ca-consommation"
+    },
+    {
+      "domain": "tesla-mag.ch",
+      "engine": "panel_power",
+      "files": [
+        "resources/tesla-ch-puissance/exemple-fictif.json",
+        "resources/tesla-ch-puissance/modele.xlsx",
+        "resources/tesla-ch-puissance/README.md",
+        "resources/tesla-ch-puissance/resultat-exemple.json",
+        "resources/tesla-ch-puissance/trame.csv"
+      ],
+      "id": "tesla-ch-puissance"
+    },
+    {
+      "domain": "trust-vault.com",
+      "engine": "test_summary",
+      "files": [
+        "resources/trust-vault-comparaison/exemple-fictif.json",
+        "resources/trust-vault-comparaison/modele.xlsx",
+        "resources/trust-vault-comparaison/README.md",
+        "resources/trust-vault-comparaison/resultat-exemple.json",
+        "resources/trust-vault-comparaison/trame.csv"
+      ],
+      "id": "trust-vault-comparaison"
+    },
+    {
+      "domain": "trustly-ai.com",
+      "engine": "test_summary",
+      "files": [
+        "resources/trustly-prompt-evaluation/exemple-fictif.json",
+        "resources/trustly-prompt-evaluation/modele.xlsx",
+        "resources/trustly-prompt-evaluation/README.md",
+        "resources/trustly-prompt-evaluation/resultat-exemple.json",
+        "resources/trustly-prompt-evaluation/trame.csv"
+      ],
+      "id": "trustly-prompt-evaluation"
+    },
+    {
+      "domain": "trustrewiews.ch",
+      "engine": "evidence_summary",
+      "files": [
+        "resources/trustrewiews-preuves/exemple-fictif.json",
+        "resources/trustrewiews-preuves/modele.xlsx",
+        "resources/trustrewiews-preuves/README.md",
+        "resources/trustrewiews-preuves/resultat-exemple.json",
+        "resources/trustrewiews-preuves/trame.csv"
+      ],
+      "id": "trustrewiews-preuves"
+    },
+    {
+      "domain": "vocalis-ai.org",
+      "engine": "test_summary",
+      "files": [
+        "resources/vocalis-org-passation/exemple-fictif.json",
+        "resources/vocalis-org-passation/modele.xlsx",
+        "resources/vocalis-org-passation/README.md",
+        "resources/vocalis-org-passation/resultat-exemple.json",
+        "resources/vocalis-org-passation/trame.csv"
+      ],
+      "id": "vocalis-org-passation"
+    },
+    {
+      "domain": "vocalis.blog",
+      "engine": "evidence_summary",
+      "files": [
+        "resources/vocalis-blog-preuves/exemple-fictif.json",
+        "resources/vocalis-blog-preuves/modele.xlsx",
+        "resources/vocalis-blog-preuves/README.md",
+        "resources/vocalis-blog-preuves/resultat-exemple.json",
+        "resources/vocalis-blog-preuves/trame.csv"
+      ],
+      "id": "vocalis-blog-preuves"
+    },
+    {
+      "domain": "vocalis.pro",
+      "engine": "test_summary",
+      "files": [
+        "resources/vocalis-pro-accueil/exemple-fictif.json",
+        "resources/vocalis-pro-accueil/modele.xlsx",
+        "resources/vocalis-pro-accueil/README.md",
+        "resources/vocalis-pro-accueil/resultat-exemple.json",
+        "resources/vocalis-pro-accueil/trame.csv"
+      ],
+      "id": "vocalis-pro-accueil"
+    },
+    {
+      "domain": "woman-cute.com",
+      "engine": "evidence_summary",
+      "files": [
+        "resources/glowafter35-labels/exemple-fictif.json",
+        "resources/glowafter35-labels/modele.xlsx",
+        "resources/glowafter35-labels/README.md",
+        "resources/glowafter35-labels/resultat-exemple.json",
+        "resources/glowafter35-labels/trame.csv"
+      ],
+      "id": "glowafter35-labels"
+    },
+    {
+      "domain": "xn--factureimpaye-mhb.fr",
+      "engine": "invoice_balance",
+      "files": [
+        "resources/facture-solde/exemple-fictif.json",
+        "resources/facture-solde/modele.xlsx",
+        "resources/facture-solde/README.md",
+        "resources/facture-solde/resultat-exemple.json",
+        "resources/facture-solde/trame.csv"
+      ],
+      "id": "facture-solde"
+    }
+  ],
+  "runtime_network_access": false,
+  "version": "2026-10-25"
+}

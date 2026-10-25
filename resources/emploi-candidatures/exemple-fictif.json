@@ -1,0 +1,16 @@
+{
+  "applications": [
+    {
+      "id": "exemple-a",
+      "stage": "APPLIED"
+    },
+    {
+      "id": "exemple-b",
+      "stage": "INTERVIEW"
+    },
+    {
+      "id": "exemple-c",
+      "stage": "CLOSED"
+    }
+  ]
+}

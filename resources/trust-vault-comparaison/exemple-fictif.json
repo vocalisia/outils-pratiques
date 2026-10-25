@@ -1,0 +1,12 @@
+{
+  "cases": [
+    {
+      "id": "outil-a-tache-1",
+      "status": "PASS"
+    },
+    {
+      "id": "outil-b-tache-1",
+      "status": "FAIL"
+    }
+  ]
+}

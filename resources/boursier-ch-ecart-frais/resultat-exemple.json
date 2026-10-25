@@ -1,0 +1,9 @@
+{
+  "engine": "fee_difference",
+  "example_type": "FICTIONAL_INPUTS_COMPUTED_OUTPUT",
+  "output": {
+    "difference_a_minus_b": 990.533376,
+    "scenario_a": 13180.477576,
+    "scenario_b": 12189.9442
+  }
+}

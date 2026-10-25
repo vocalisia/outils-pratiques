@@ -1,0 +1,15 @@
+{
+  "engine": "application_summary",
+  "example_type": "FICTIONAL_INPUTS_COMPUTED_OUTPUT",
+  "output": {
+    "current_stage_counts": {
+      "APPLIED": 1,
+      "CLOSED": 1,
+      "DRAFT": 0,
+      "INTERVIEW": 1,
+      "OFFER": 0
+    },
+    "limitation": "Current stage counts, not cumulative conversion rates.",
+    "total": 3
+  }
+}

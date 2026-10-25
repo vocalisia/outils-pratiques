@@ -1,0 +1,11 @@
+{
+  "engine": "funnel",
+  "example_type": "FICTIONAL_INPUTS_COMPUTED_OUTPUT",
+  "output": {
+    "held_per_meeting": 0.75,
+    "meeting_per_reply": 0.4,
+    "reply_fraction": 0.2,
+    "sale_per_contact": 0.02,
+    "sale_per_held": 0.333333
+  }
+}

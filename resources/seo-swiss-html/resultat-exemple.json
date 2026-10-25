@@ -1,0 +1,16 @@
+{
+  "engine": "html_audit",
+  "example_type": "FICTIONAL_INPUTS_COMPUTED_OUTPUT",
+  "output": {
+    "declared_canonicals": [
+      "https://example.org/"
+    ],
+    "declared_robots": [],
+    "h1": [
+      "Exemple fictif"
+    ],
+    "indexation": "NOT_TESTED",
+    "lang": "fr",
+    "title": "Exemple"
+  }
+}

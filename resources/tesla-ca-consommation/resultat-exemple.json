@@ -1,0 +1,7 @@
+{
+  "engine": "consumption",
+  "example_type": "FICTIONAL_INPUTS_COMPUTED_OUTPUT",
+  "output": {
+    "kwh_per_100km": 19.0
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "engine": "sitemap_audit",
+  "example_type": "FICTIONAL_INPUTS_COMPUTED_OUTPUT",
+  "output": {
+    "child_sitemaps_fetched": false,
+    "duplicates": [
+      "https://example.org/a"
+    ],
+    "entries": 2,
+    "indexation": "NOT_TESTED",
+    "kind": "urlset",
+    "unique_locations": 1
+  }
+}

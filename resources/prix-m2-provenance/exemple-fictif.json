@@ -1,0 +1,12 @@
+{
+  "records": [
+    {
+      "id": "indice-a",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "indice-b",
+      "state": "OUTDATED"
+    }
+  ]
+}

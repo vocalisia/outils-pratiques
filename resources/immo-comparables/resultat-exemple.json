@@ -1,0 +1,14 @@
+{
+  "engine": "comparables",
+  "example_type": "FICTIONAL_INPUTS_COMPUTED_OUTPUT",
+  "output": {
+    "count": 3,
+    "limitation": "Unadjusted arithmetic of supplied observations, not a property appraisal.",
+    "median_price_per_area": 6000.0,
+    "price_per_area": [
+      5000.0,
+      6000.0,
+      7000.0
+    ]
+  }
+}

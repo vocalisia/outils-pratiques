@@ -1,0 +1,9 @@
+{
+  "engine": "car_budget",
+  "example_type": "FICTIONAL_INPUTS_COMPUTED_OUTPUT",
+  "output": {
+    "monthly_equivalent": 401.666667,
+    "net_scenario_cost": 9640.0,
+    "running_total": 3840.0
+  }
+}

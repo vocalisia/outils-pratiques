@@ -1,0 +1,9 @@
+{
+  "engine": "budget_gap",
+  "example_type": "FICTIONAL_INPUTS_COMPUTED_OUTPUT",
+  "output": {
+    "monthly_gap": 950.0,
+    "monthly_need": 4450.0,
+    "monthly_surplus": 0
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "engine": "quote_total",
+  "example_type": "FICTIONAL_INPUTS_COMPUTED_OUTPUT",
+  "output": {
+    "fixed_cost": 50.0,
+    "line_totals": [
+      250.0,
+      200.0
+    ],
+    "total": 500.0
+  }
+}

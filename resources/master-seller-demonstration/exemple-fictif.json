@@ -1,0 +1,16 @@
+{
+  "cases": [
+    {
+      "id": "besoin-reformule",
+      "status": "PASS"
+    },
+    {
+      "id": "limite-produit-expliquee",
+      "status": "FAIL"
+    },
+    {
+      "id": "question-sans-reponse",
+      "status": "NOT_RUN"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "engine": "test_summary",
+  "example_type": "FICTIONAL_INPUTS_COMPUTED_OUTPUT",
+  "output": {
+    "counts": {
+      "FAIL": 1,
+      "NOT_RUN": 1,
+      "PASS": 1
+    },
+    "limitation": "Counts of supplied records, not independently observed product performance.",
+    "pass_fraction_of_run_cases": 0.5,
+    "tested": 2
+  }
+}

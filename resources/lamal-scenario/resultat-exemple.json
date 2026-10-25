@@ -1,0 +1,9 @@
+{
+  "engine": "annual_scenario",
+  "example_type": "FICTIONAL_INPUTS_COMPUTED_OUTPUT",
+  "output": {
+    "annual_scenario_total": 4900.0,
+    "assumed_out_of_pocket": 700.0,
+    "twelve_premiums": 4200.0
+  }
+}

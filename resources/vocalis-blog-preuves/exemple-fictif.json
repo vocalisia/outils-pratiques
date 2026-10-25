@@ -1,0 +1,12 @@
+{
+  "records": [
+    {
+      "id": "sequence-a",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "sequence-b",
+      "state": "MISSING"
+    }
+  ]
+}

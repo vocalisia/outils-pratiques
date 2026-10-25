@@ -1,0 +1,12 @@
+{
+  "records": [
+    {
+      "id": "plan-bien",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "estimation",
+      "state": "MISSING"
+    }
+  ]
+}

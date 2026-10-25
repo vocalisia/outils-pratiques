@@ -1,0 +1,9 @@
+{
+  "engine": "fx_cost",
+  "example_type": "FICTIONAL_INPUTS_COMPUTED_OUTPUT",
+  "output": {
+    "home_currency_notional": 900.0,
+    "home_currency_total": 905.0,
+    "quote_currency_notional": 1000.0
+  }
+}

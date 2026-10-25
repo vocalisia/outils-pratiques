@@ -1,0 +1,10 @@
+{
+  "engine": "time_comparison",
+  "example_type": "FICTIONAL_INPUTS_COMPUTED_OUTPUT",
+  "output": {
+    "automated_plus_review_minutes": 20.0,
+    "net_minutes_for_all_runs": 500.0,
+    "net_minutes_per_run": 25.0,
+    "relative_time_reduction": 0.555556
+  }
+}

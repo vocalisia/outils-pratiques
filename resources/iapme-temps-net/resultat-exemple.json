@@ -1,0 +1,9 @@
+{
+  "engine": "automation_balance",
+  "example_type": "FICTIONAL_INPUTS_COMPUTED_OUTPUT",
+  "output": {
+    "monthly_hours_saved": 13.333333,
+    "monthly_net_scenario_value": 500.0,
+    "simple_payback_months": 1.8
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "capital": 10000,
+  "fee_a": 0.002,
+  "fee_b": 0.01,
+  "gross_return": 0.03,
+  "years": 10
+}

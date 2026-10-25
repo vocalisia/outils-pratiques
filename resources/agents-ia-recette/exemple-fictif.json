@@ -1,0 +1,12 @@
+{
+  "records": [
+    {
+      "id": "commande",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "exception",
+      "state": "MISSING"
+    }
+  ]
+}

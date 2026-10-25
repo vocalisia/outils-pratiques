@@ -1,0 +1,9 @@
+{
+  "engine": "panel_power",
+  "example_type": "FICTIONAL_INPUTS_COMPUTED_OUTPUT",
+  "output": {
+    "annual_kwh": null,
+    "nominal_kw": 5.4,
+    "nominal_watts": 5400.0
+  }
+}

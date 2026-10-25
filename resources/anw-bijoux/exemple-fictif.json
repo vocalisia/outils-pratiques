@@ -1,0 +1,12 @@
+{
+  "records": [
+    {
+      "id": "composition",
+      "state": "MISSING"
+    },
+    {
+      "id": "notice-atelier",
+      "state": "VERIFIED"
+    }
+  ]
+}

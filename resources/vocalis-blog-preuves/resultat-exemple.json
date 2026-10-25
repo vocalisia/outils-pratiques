@@ -1,0 +1,13 @@
+{
+  "engine": "evidence_summary",
+  "example_type": "FICTIONAL_INPUTS_COMPUTED_OUTPUT",
+  "output": {
+    "counts": {
+      "MISSING": 1,
+      "OUTDATED": 0,
+      "VERIFIED": 1
+    },
+    "limitation": "VERIFIED is the user's declared state; this tool does not verify a source.",
+    "needs_review": 1
+  }
+}

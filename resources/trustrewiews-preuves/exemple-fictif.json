@@ -1,0 +1,16 @@
+{
+  "records": [
+    {
+      "id": "identite",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "reference-chantier",
+      "state": "MISSING"
+    },
+    {
+      "id": "avis",
+      "state": "OUTDATED"
+    }
+  ]
+}
