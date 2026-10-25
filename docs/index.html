@@ -1,0 +1,722 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Outils pratiques — documentation et exemples de calcul</title><meta name="description" content="Documentation de 35 journaux et outils Python hors ligne : entrées, résultats fictifs, limites et fichiers téléchargeables."><link rel="canonical" href="https://vocalisia.github.io/outils-pratiques/"><link rel="stylesheet" href="style.css"></head><body><a class="skip" href="#contenu">Aller au contenu</a><header><p>Documentation du projet</p><h1>Outils pratiques</h1><p class="intro">Des journaux de travail et des calculs hors ligne pour contrôler un scénario, documenter une observation ou préparer une décision. Le projet comprend 35 ressources, 22 moteurs Python et des exemples entièrement fictifs.</p>
+<p><a href="https://github.com/vocalisia/outils-pratiques/releases/latest/download/outils-pratiques.zip">Télécharger le projet complet</a> · <a href="https://github.com/vocalisia/outils-pratiques">Consulter le code et les 62 tests</a></p>
+<p class="intro">Les fichiers Excel, CSV et Google Sheets servent de journaux à copier en privé. Ils ne recalculent pas automatiquement. Pour reproduire un calcul, Python 3.10 ou supérieur suffit, sans bibliothèque supplémentaire. Aucun service distant n’est appelé et aucune donnée n’est envoyée.</p>
+<p class="intro">Téléchargez l’archive, décompressez-la et ouvrez un terminal dans le dossier obtenu. Exécutez la commande indiquée dans la ressource choisie. Modifiez une copie privée du JSON d’entrée pour tester votre propre scénario. Conservez les unités de l’exemple ; n’insérez jamais de données personnelles dans un fichier public.</p>
+<p class="intro">Les ratios sans dénominateur sont renvoyés sous la forme <code>null</code>. Les calculs rejettent les valeurs non finies ou incompatibles avec leur contrat ; les nombres de sortie sont arrondis à six décimales. Les journaux résument uniquement les états que leur utilisateur déclare. Ils ne certifient aucune preuve externe.</p>
+<p class="intro">Les ressources sont associées aux sites de notre portefeuille éditorial. Cette affiliation est déclarée dans chaque notice ; le catalogue ne constitue pas un classement indépendant. Les résultats d’exemple ne représentent aucun prix réel, relevé client ou résultat de terrain.</p></header><main id="contenu"><nav id="catalogue" aria-label="Catalogue des ressources"><h2>Choisir une ressource</h2><ul class="catalogue"><li><a href="#achetervoiture"><strong>achetervoiture.be</strong><span>Budget de détention d&#x27;une voiture</span></a></li><li><a href="#whatsup-recette"><strong>agentic-whatsup.com</strong><span>Recette d&#x27;un parcours WhatsApp</span></a></li><li><a href="#agents-ia-recette"><strong>agents-ia.pro</strong><span>Contrat de fonctionnement d&#x27;un agent métier</span></a></li><li><a href="#ai-due-benchmark"><strong>ai-due.com</strong><span>Comparaison de tâches manuelles et automatisées</span></a></li><li><a href="#anw-bijoux"><strong>anwbijoux.com</strong><span>Carnet de matériaux et d&#x27;entretien des bijoux</span></a></li><li><a href="#assistance-planning"><strong>assistanceseniors.ch</strong><span>Planning d&#x27;aide non médicale</span></a></li><li><a href="#boursier-be-frais"><strong>boursier.be</strong><span>Budget de frais de transaction</span></a></li><li><a href="#boursier-ch-ecart-frais"><strong>boursier.ch</strong><span>Écart entre deux scénarios de frais annuels</span></a></li><li><a href="#cbd-sources"><strong>cbdeuropa.com</strong><span>Registre de sources par pays pour le CBD</span></a></li><li><a href="#epargne-budget"><strong>epargne-suisse.ch</strong><span>Budget mensuel d&#x27;un scénario de retraite</span></a></li><li><a href="#immo-comparables"><strong>estimation-bien.ch</strong><span>Lecture arithmétique de comparables immobiliers</span></a></li><li><a href="#succession-documents"><strong>estimation-succession.ch</strong><span>Inventaire des documents d&#x27;un bien hérité</span></a></li><li><a href="#iapme-temps-net"><strong>iapmesuisse.ch</strong><span>Bilan de temps et de coût d&#x27;une automatisation</span></a></li><li><a href="#emploi-candidatures"><strong>job-emploi.ch</strong><span>Suivi de candidatures et d&#x27;offres réelles</span></a></li><li><a href="#leadgene-ch-qualification"><strong>lead-gene.ch</strong><span>Complétude d&#x27;une qualification commerciale</span></a></li><li><a href="#leadgene-com-entonnoir"><strong>lead-gene.com</strong><span>Conversions d&#x27;un entonnoir commercial</span></a></li><li><a href="#master-seller-demonstration"><strong>master-seller.fr</strong><span>Revue d&#x27;une démonstration de vente IA</span></a></li><li><a href="#artisan-devis"><strong>meilleurartisan.ch</strong><span>Addition de postes d&#x27;un devis de travaux</span></a></li><li><a href="#prix-m2-provenance"><strong>prix-m2-suisse.ch</strong><span>Provenance des indicateurs immobiliers</span></a></li><li><a href="#recouvrement-journal"><strong>recouvrementpro.ca</strong><span>Journal des pièces et des échanges d&#x27;une facture</span></a></li><li><a href="#lamal-scenario"><strong>sante-lamal.ch</strong><span>Budget annuel sous hypothèses choisies</span></a></li><li><a href="#seo-swiss-html"><strong>seo-swiss.ch</strong><span>Contrôle local d&#x27;un document HTML</span></a></li><li><a href="#seo-true-sitemap"><strong>seo-true.com</strong><span>Contrôle local d&#x27;un sitemap XML</span></a></li><li><a href="#stock-market-fx"><strong>stock-market.ch</strong><span>Cross-currency purchase cost worksheet</span></a></li><li><a href="#suisy-decision"><strong>suisy.ch</strong><span>Matrice de décision pondérée</span></a></li><li><a href="#tesla-ca-consommation"><strong>tesla-mag.ca</strong><span>Journal de consommation électrique observée</span></a></li><li><a href="#tesla-ch-puissance"><strong>tesla-mag.ch</strong><span>Puissance nominale d&#x27;un ensemble de panneaux</span></a></li><li><a href="#trust-vault-comparaison"><strong>trust-vault.com</strong><span>Comparaison reproductible d&#x27;outils sur une tâche</span></a></li><li><a href="#trustly-prompt-evaluation"><strong>trustly-ai.com</strong><span>Prompt-pack acceptance test log</span></a></li><li><a href="#trustrewiews-preuves"><strong>trustrewiews.ch</strong><span>Preuves utiles pour comparer des entreprises</span></a></li><li><a href="#vocalis-org-passation"><strong>vocalis-ai.org</strong><span>Recette de transfert d&#x27;un agent vocal vers un humain</span></a></li><li><a href="#vocalis-blog-preuves"><strong>vocalis.blog</strong><span>Registre de preuves d&#x27;une démonstration vocale</span></a></li><li><a href="#vocalis-pro-accueil"><strong>vocalis.pro</strong><span>Recette d&#x27;un accueil téléphonique automatisé</span></a></li><li><a href="#glowafter35-labels"><strong>woman-cute.com</strong><span>Cosmetic label and ingredient evidence register</span></a></li><li><a href="#facture-solde"><strong>xn--factureimpaye-mhb.fr</strong><span>Solde arithmétique d&#x27;une facture et de ses paiements</span></a></li></ul></nav><section id="achetervoiture" aria-labelledby="heading-achetervoiture"><h2 id="heading-achetervoiture">Budget de détention d&#x27;une voiture</h2><p>Comparer un achat sur une durée donnée en séparant prix d&#x27;achat, frais initiaux, dépenses mensuelles et revente hypothétique.</p><p><strong>Limite :</strong> <span>Aucune taxe, valeur de revente ou assurance n&#x27;est préremplie comme montant réel. Tous les chiffres d&#x27;exemple sont fictifs.</span></p><p>Site associé : <a href="https://achetervoiture.be/">achetervoiture.be</a>. Ressource proposée dans le cadre de son portefeuille éditorial.</p><p class="downloads"><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/achetervoiture/modele.xlsx">Journal Excel</a> · <a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/achetervoiture/trame.csv">Trame CSV</a> · <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRcG5ug4OJIDQT9zeyfTrtoWJYnoDEz2D_SBlfUr1NvJTGu7Ng8-WUttrtO5hpwLNr0EtpvKrj7Znwk/pubhtml?gid=1997580419&amp;single=true">Version Google Sheets</a></p><details><summary>Champs du journal et exemple reproductible</summary><ul><li>Poste</li><li>Montant observé</li><li>Devise</li><li>Période</li><li>Source du devis</li><li>Vérifié le</li></ul><h3>Entrée fictive</h3><pre><code>{
+  &quot;initial_costs&quot;: 800,
+  &quot;monthly_running&quot;: 160,
+  &quot;months&quot;: 24,
+  &quot;purchase&quot;: 12000,
+  &quot;resale&quot;: 7000
+}</code></pre><h3>Résultat de cet exemple</h3><pre><code>{
+  &quot;engine&quot;: &quot;car_budget&quot;,
+  &quot;example_type&quot;: &quot;FICTIONAL_INPUTS_COMPUTED_OUTPUT&quot;,
+  &quot;output&quot;: {
+    &quot;monthly_equivalent&quot;: 401.666667,
+    &quot;net_scenario_cost&quot;: 9640.0,
+    &quot;running_total&quot;: 3840.0
+  }
+}</code></pre><h3>Commande locale</h3><pre><code>python -X utf8 run.py car_budget resources/achetervoiture/exemple-fictif.json</code></pre><p><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/achetervoiture/exemple-fictif.json">Télécharger cette entrée JSON</a> · <a href="https://github.com/vocalisia/outils-pratiques/tree/main/resources/achetervoiture">Notice et fichiers sources</a></p></details><p>Référence pour le contexte : <a href="https://www.belgium.be/fr/mobilite/vehicules/acheter_ou_vendre_un_vehicule/acheter_d_occasion">consulter la source institutionnelle</a>.</p><p><a href="#catalogue">Retour au catalogue</a></p></section><section id="whatsup-recette" aria-labelledby="heading-whatsup-recette"><h2 id="heading-whatsup-recette">Recette d&#x27;un parcours WhatsApp</h2><p>Tester les réponses, les demandes ambiguës et le passage à un humain avant l&#x27;ouverture d&#x27;un agent WhatsApp.</p><p><strong>Limite :</strong> <span>Le journal n&#x27;envoie aucun message et n&#x27;accède à aucun compte WhatsApp. Les scénarios fournis sont fictifs.</span></p><p>Site associé : <a href="https://agentic-whatsup.com/">agentic-whatsup.com</a>. Ressource proposée dans le cadre de son portefeuille éditorial.</p><p class="downloads"><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/whatsup-recette/modele.xlsx">Journal Excel</a> · <a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/whatsup-recette/trame.csv">Trame CSV</a> · <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRcG5ug4OJIDQT9zeyfTrtoWJYnoDEz2D_SBlfUr1NvJTGu7Ng8-WUttrtO5hpwLNr0EtpvKrj7Znwk/pubhtml?gid=1832783127&amp;single=true">Version Google Sheets</a></p><details><summary>Champs du journal et exemple reproductible</summary><ul><li>Scénario</li><li>Message fictif</li><li>Réponse attendue</li><li>Réponse observée</li><li>Statut PASS / FAIL / NOT_RUN</li><li>Trace privée</li><li>Correction</li></ul><h3>Entrée fictive</h3><pre><code>{
+  &quot;cases&quot;: [
+    {
+      &quot;id&quot;: &quot;message-incompris&quot;,
+      &quot;status&quot;: &quot;FAIL&quot;
+    },
+    {
+      &quot;id&quot;: &quot;demande-humain&quot;,
+      &quot;status&quot;: &quot;PASS&quot;
+    },
+    {
+      &quot;id&quot;: &quot;message-hors-sujet&quot;,
+      &quot;status&quot;: &quot;NOT_RUN&quot;
+    }
+  ]
+}</code></pre><h3>Résultat de cet exemple</h3><pre><code>{
+  &quot;engine&quot;: &quot;test_summary&quot;,
+  &quot;example_type&quot;: &quot;FICTIONAL_INPUTS_COMPUTED_OUTPUT&quot;,
+  &quot;output&quot;: {
+    &quot;counts&quot;: {
+      &quot;FAIL&quot;: 1,
+      &quot;NOT_RUN&quot;: 1,
+      &quot;PASS&quot;: 1
+    },
+    &quot;limitation&quot;: &quot;Counts of supplied records, not independently observed product performance.&quot;,
+    &quot;pass_fraction_of_run_cases&quot;: 0.5,
+    &quot;tested&quot;: 2
+  }
+}</code></pre><h3>Commande locale</h3><pre><code>python -X utf8 run.py test_summary resources/whatsup-recette/exemple-fictif.json</code></pre><p><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/whatsup-recette/exemple-fictif.json">Télécharger cette entrée JSON</a> · <a href="https://github.com/vocalisia/outils-pratiques/tree/main/resources/whatsup-recette">Notice et fichiers sources</a></p></details><p><a href="#catalogue">Retour au catalogue</a></p></section><section id="agents-ia-recette" aria-labelledby="heading-agents-ia-recette"><h2 id="heading-agents-ia-recette">Contrat de fonctionnement d&#x27;un agent métier</h2><p>Décrire ce qu&#x27;un agent doit produire, dans quelles conditions, et qui reprend une exception.</p><p><strong>Limite :</strong> <span>Une fiche complétée ne certifie ni autonomie, ni conformité, ni performance de l&#x27;agent.</span></p><p>Site associé : <a href="https://agents-ia.pro/">agents-ia.pro</a>. Ressource proposée dans le cadre de son portefeuille éditorial.</p><p class="downloads"><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/agents-ia-recette/modele.xlsx">Journal Excel</a> · <a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/agents-ia-recette/trame.csv">Trame CSV</a> · <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRcG5ug4OJIDQT9zeyfTrtoWJYnoDEz2D_SBlfUr1NvJTGu7Ng8-WUttrtO5hpwLNr0EtpvKrj7Znwk/pubhtml?gid=2072784543&amp;single=true">Version Google Sheets</a></p><details><summary>Champs du journal et exemple reproductible</summary><ul><li>Tâche métier</li><li>Déclencheur</li><li>Entrées minimales</li><li>Sortie attendue</li><li>Exception</li><li>Responsable humain</li><li>Preuve</li><li>État VERIFIED / MISSING / OUTDATED</li></ul><h3>Entrée fictive</h3><pre><code>{
+  &quot;records&quot;: [
+    {
+      &quot;id&quot;: &quot;commande&quot;,
+      &quot;state&quot;: &quot;VERIFIED&quot;
+    },
+    {
+      &quot;id&quot;: &quot;exception&quot;,
+      &quot;state&quot;: &quot;MISSING&quot;
+    }
+  ]
+}</code></pre><h3>Résultat de cet exemple</h3><pre><code>{
+  &quot;engine&quot;: &quot;evidence_summary&quot;,
+  &quot;example_type&quot;: &quot;FICTIONAL_INPUTS_COMPUTED_OUTPUT&quot;,
+  &quot;output&quot;: {
+    &quot;counts&quot;: {
+      &quot;MISSING&quot;: 1,
+      &quot;OUTDATED&quot;: 0,
+      &quot;VERIFIED&quot;: 1
+    },
+    &quot;limitation&quot;: &quot;VERIFIED is the user&#x27;s declared state; this tool does not verify a source.&quot;,
+    &quot;needs_review&quot;: 1
+  }
+}</code></pre><h3>Commande locale</h3><pre><code>python -X utf8 run.py evidence_summary resources/agents-ia-recette/exemple-fictif.json</code></pre><p><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/agents-ia-recette/exemple-fictif.json">Télécharger cette entrée JSON</a> · <a href="https://github.com/vocalisia/outils-pratiques/tree/main/resources/agents-ia-recette">Notice et fichiers sources</a></p></details><p><a href="#catalogue">Retour au catalogue</a></p></section><section id="ai-due-benchmark" aria-labelledby="heading-ai-due-benchmark"><h2 id="heading-ai-due-benchmark">Comparaison de tâches manuelles et automatisées</h2><p>Mesurer le temps net en comptant la relecture et la fréquence, avec les mêmes critères de résultat.</p><p><strong>Limite :</strong> <span>Les durées d&#x27;exemple sont inventées. Aucun gain réel ou revenu n&#x27;est déduit d&#x27;un exemple.</span></p><p>Site associé : <a href="https://ai-due.com/">ai-due.com</a>. Ressource proposée dans le cadre de son portefeuille éditorial.</p><p class="downloads"><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/ai-due-benchmark/modele.xlsx">Journal Excel</a> · <a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/ai-due-benchmark/trame.csv">Trame CSV</a> · <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRcG5ug4OJIDQT9zeyfTrtoWJYnoDEz2D_SBlfUr1NvJTGu7Ng8-WUttrtO5hpwLNr0EtpvKrj7Znwk/pubhtml?gid=590411211&amp;single=true">Version Google Sheets</a></p><details><summary>Champs du journal et exemple reproductible</summary><ul><li>Tâche</li><li>Durée manuelle min</li><li>Durée automatisée min</li><li>Relecture min</li><li>Résultat accepté</li><li>Conditions d&#x27;essai</li><li>Trace</li></ul><h3>Entrée fictive</h3><pre><code>{
+  &quot;automated_minutes&quot;: 12,
+  &quot;manual_minutes&quot;: 45,
+  &quot;review_minutes&quot;: 8,
+  &quot;runs&quot;: 20
+}</code></pre><h3>Résultat de cet exemple</h3><pre><code>{
+  &quot;engine&quot;: &quot;time_comparison&quot;,
+  &quot;example_type&quot;: &quot;FICTIONAL_INPUTS_COMPUTED_OUTPUT&quot;,
+  &quot;output&quot;: {
+    &quot;automated_plus_review_minutes&quot;: 20.0,
+    &quot;net_minutes_for_all_runs&quot;: 500.0,
+    &quot;net_minutes_per_run&quot;: 25.0,
+    &quot;relative_time_reduction&quot;: 0.555556
+  }
+}</code></pre><h3>Commande locale</h3><pre><code>python -X utf8 run.py time_comparison resources/ai-due-benchmark/exemple-fictif.json</code></pre><p><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/ai-due-benchmark/exemple-fictif.json">Télécharger cette entrée JSON</a> · <a href="https://github.com/vocalisia/outils-pratiques/tree/main/resources/ai-due-benchmark">Notice et fichiers sources</a></p></details><p><a href="#catalogue">Retour au catalogue</a></p></section><section id="anw-bijoux" aria-labelledby="heading-anw-bijoux"><h2 id="heading-anw-bijoux">Carnet de matériaux et d&#x27;entretien des bijoux</h2><p>Retrouver la composition déclarée et la notice du fabricant avant de choisir une méthode d&#x27;entretien.</p><p><strong>Limite :</strong> <span>Aucun matériau, traitement, produit de nettoyage ou effet sur la peau n&#x27;est présumé. Suivre la notice réelle du fabricant.</span></p><p>Site associé : <a href="https://anwbijoux.com/">anwbijoux.com</a>. Ressource proposée dans le cadre de son portefeuille éditorial.</p><p class="downloads"><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/anw-bijoux/modele.xlsx">Journal Excel</a> · <a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/anw-bijoux/trame.csv">Trame CSV</a> · <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRcG5ug4OJIDQT9zeyfTrtoWJYnoDEz2D_SBlfUr1NvJTGu7Ng8-WUttrtO5hpwLNr0EtpvKrj7Znwk/pubhtml?gid=85523613&amp;single=true">Version Google Sheets</a></p><details><summary>Champs du journal et exemple reproductible</summary><ul><li>Référence interne</li><li>Matériau déclaré</li><li>Document du fabricant</li><li>Instruction exacte</li><li>Précaution à confirmer</li><li>Vérifié le</li><li>État VERIFIED / MISSING / OUTDATED</li></ul><h3>Entrée fictive</h3><pre><code>{
+  &quot;records&quot;: [
+    {
+      &quot;id&quot;: &quot;composition&quot;,
+      &quot;state&quot;: &quot;MISSING&quot;
+    },
+    {
+      &quot;id&quot;: &quot;notice-atelier&quot;,
+      &quot;state&quot;: &quot;VERIFIED&quot;
+    }
+  ]
+}</code></pre><h3>Résultat de cet exemple</h3><pre><code>{
+  &quot;engine&quot;: &quot;evidence_summary&quot;,
+  &quot;example_type&quot;: &quot;FICTIONAL_INPUTS_COMPUTED_OUTPUT&quot;,
+  &quot;output&quot;: {
+    &quot;counts&quot;: {
+      &quot;MISSING&quot;: 1,
+      &quot;OUTDATED&quot;: 0,
+      &quot;VERIFIED&quot;: 1
+    },
+    &quot;limitation&quot;: &quot;VERIFIED is the user&#x27;s declared state; this tool does not verify a source.&quot;,
+    &quot;needs_review&quot;: 1
+  }
+}</code></pre><h3>Commande locale</h3><pre><code>python -X utf8 run.py evidence_summary resources/anw-bijoux/exemple-fictif.json</code></pre><p><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/anw-bijoux/exemple-fictif.json">Télécharger cette entrée JSON</a> · <a href="https://github.com/vocalisia/outils-pratiques/tree/main/resources/anw-bijoux">Notice et fichiers sources</a></p></details><p><a href="#catalogue">Retour au catalogue</a></p></section><section id="assistance-planning" aria-labelledby="heading-assistance-planning"><h2 id="heading-assistance-planning">Planning d&#x27;aide non médicale</h2><p>Répartir les créneaux d&#x27;aide quotidienne et calculer le total hebdomadaire sans information médicale.</p><p><strong>Limite :</strong> <span>Ce planning ne définit pas un besoin de soins, une prescription ou l&#x27;éligibilité à une prestation.</span></p><p>Site associé : <a href="https://assistanceseniors.ch/">assistanceseniors.ch</a>. Ressource proposée dans le cadre de son portefeuille éditorial.</p><p class="downloads"><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/assistance-planning/modele.xlsx">Journal Excel</a> · <a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/assistance-planning/trame.csv">Trame CSV</a> · <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRcG5ug4OJIDQT9zeyfTrtoWJYnoDEz2D_SBlfUr1NvJTGu7Ng8-WUttrtO5hpwLNr0EtpvKrj7Znwk/pubhtml?gid=1497749565&amp;single=true">Version Google Sheets</a></p><details><summary>Champs du journal et exemple reproductible</summary><ul><li>Jour</li><li>Créneau</li><li>Aide non médicale prévue</li><li>Durée min</li><li>Intervenant dans copie privée</li><li>Relais</li><li>Confirmé</li></ul><h3>Entrée fictive</h3><pre><code>{
+  &quot;minutes&quot;: [
+    60,
+    45,
+    0,
+    90,
+    30,
+    0,
+    60
+  ]
+}</code></pre><h3>Résultat de cet exemple</h3><pre><code>{
+  &quot;engine&quot;: &quot;weekly_hours&quot;,
+  &quot;example_type&quot;: &quot;FICTIONAL_INPUTS_COMPUTED_OUTPUT&quot;,
+  &quot;output&quot;: {
+    &quot;weekly_hours&quot;: 4.75,
+    &quot;weekly_minutes&quot;: 285.0
+  }
+}</code></pre><h3>Commande locale</h3><pre><code>python -X utf8 run.py weekly_hours resources/assistance-planning/exemple-fictif.json</code></pre><p><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/assistance-planning/exemple-fictif.json">Télécharger cette entrée JSON</a> · <a href="https://github.com/vocalisia/outils-pratiques/tree/main/resources/assistance-planning">Notice et fichiers sources</a></p></details><p><a href="#catalogue">Retour au catalogue</a></p></section><section id="boursier-be-frais" aria-labelledby="heading-boursier-be-frais"><h2 id="heading-boursier-be-frais">Budget de frais de transaction</h2><p>Additionner les frais fixes, proportionnels et annuels d&#x27;un scénario défini par l&#x27;utilisateur.</p><p><strong>Limite :</strong> <span>Ni impôt, ni rendement, ni cours actuel, ni recommandation d&#x27;investissement ne sont calculés. Une grille tarifaire réelle reste nécessaire.</span></p><p>Site associé : <a href="https://boursier.be/">boursier.be</a>. Ressource proposée dans le cadre de son portefeuille éditorial.</p><p class="downloads"><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/boursier-be-frais/modele.xlsx">Journal Excel</a> · <a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/boursier-be-frais/trame.csv">Trame CSV</a> · <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRcG5ug4OJIDQT9zeyfTrtoWJYnoDEz2D_SBlfUr1NvJTGu7Ng8-WUttrtO5hpwLNr0EtpvKrj7Znwk/pubhtml?gid=1186948179&amp;single=true">Version Google Sheets</a></p><details><summary>Champs du journal et exemple reproductible</summary><ul><li>Intermédiaire</li><li>Nombre d&#x27;ordres</li><li>Montant par ordre</li><li>Frais fixes</li><li>Taux proportionnel décimal</li><li>Autres frais annuels</li><li>Source et date</li></ul><h3>Entrée fictive</h3><pre><code>{
+  &quot;amount_per_order&quot;: 1000,
+  &quot;annual_custody&quot;: 24,
+  &quot;fixed_fee&quot;: 3,
+  &quot;orders&quot;: 12,
+  &quot;proportional_rate&quot;: 0.001
+}</code></pre><h3>Résultat de cet exemple</h3><pre><code>{
+  &quot;engine&quot;: &quot;trading_fees&quot;,
+  &quot;example_type&quot;: &quot;FICTIONAL_INPUTS_COMPUTED_OUTPUT&quot;,
+  &quot;output&quot;: {
+    &quot;custody&quot;: 24.0,
+    &quot;order_fees&quot;: 48.0,
+    &quot;total_fees&quot;: 72.0
+  }
+}</code></pre><h3>Commande locale</h3><pre><code>python -X utf8 run.py trading_fees resources/boursier-be-frais/exemple-fictif.json</code></pre><p><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/boursier-be-frais/exemple-fictif.json">Télécharger cette entrée JSON</a> · <a href="https://github.com/vocalisia/outils-pratiques/tree/main/resources/boursier-be-frais">Notice et fichiers sources</a></p></details><p><a href="#catalogue">Retour au catalogue</a></p></section><section id="boursier-ch-ecart-frais" aria-labelledby="heading-boursier-ch-ecart-frais"><h2 id="heading-boursier-ch-ecart-frais">Écart entre deux scénarios de frais annuels</h2><p>Isoler l&#x27;effet arithmétique de deux niveaux de frais, à hypothèses de rendement identiques.</p><p><strong>Limite :</strong> <span>Rendement constant et frais annuels simplifiés ; ce calcul n&#x27;est pas une prévision et ne représente aucun produit réel.</span></p><p>Site associé : <a href="https://boursier.ch/">boursier.ch</a>. Ressource proposée dans le cadre de son portefeuille éditorial.</p><p class="downloads"><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/boursier-ch-ecart-frais/modele.xlsx">Journal Excel</a> · <a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/boursier-ch-ecart-frais/trame.csv">Trame CSV</a> · <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRcG5ug4OJIDQT9zeyfTrtoWJYnoDEz2D_SBlfUr1NvJTGu7Ng8-WUttrtO5hpwLNr0EtpvKrj7Znwk/pubhtml?gid=537216805&amp;single=true">Version Google Sheets</a></p><details><summary>Champs du journal et exemple reproductible</summary><ul><li>Hypothèse</li><li>Capital initial</li><li>Rendement hypothétique décimal</li><li>Frais A décimaux</li><li>Frais B décimaux</li><li>Durée années</li><li>Source tarifaire</li></ul><h3>Entrée fictive</h3><pre><code>{
+  &quot;capital&quot;: 10000,
+  &quot;fee_a&quot;: 0.002,
+  &quot;fee_b&quot;: 0.01,
+  &quot;gross_return&quot;: 0.03,
+  &quot;years&quot;: 10
+}</code></pre><h3>Résultat de cet exemple</h3><pre><code>{
+  &quot;engine&quot;: &quot;fee_difference&quot;,
+  &quot;example_type&quot;: &quot;FICTIONAL_INPUTS_COMPUTED_OUTPUT&quot;,
+  &quot;output&quot;: {
+    &quot;difference_a_minus_b&quot;: 990.533376,
+    &quot;scenario_a&quot;: 13180.477576,
+    &quot;scenario_b&quot;: 12189.9442
+  }
+}</code></pre><h3>Commande locale</h3><pre><code>python -X utf8 run.py fee_difference resources/boursier-ch-ecart-frais/exemple-fictif.json</code></pre><p><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/boursier-ch-ecart-frais/exemple-fictif.json">Télécharger cette entrée JSON</a> · <a href="https://github.com/vocalisia/outils-pratiques/tree/main/resources/boursier-ch-ecart-frais">Notice et fichiers sources</a></p></details><p><a href="#catalogue">Retour au catalogue</a></p></section><section id="cbd-sources" aria-labelledby="heading-cbd-sources"><h2 id="heading-cbd-sources">Registre de sources par pays pour le CBD</h2><p>Garder une source et une date pour chaque juridiction au lieu d&#x27;étendre une règle à toute l&#x27;Europe.</p><p><strong>Limite :</strong> <span>Le registre est vide de conclusions réglementaires. Il ne détermine pas si un produit peut être vendu ou consommé et n&#x27;attribue aucun bénéfice médical.</span></p><p>Site associé : <a href="https://cbdeuropa.com/">cbdeuropa.com</a>. Ressource proposée dans le cadre de son portefeuille éditorial.</p><p class="downloads"><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/cbd-sources/modele.xlsx">Journal Excel</a> · <a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/cbd-sources/trame.csv">Trame CSV</a> · <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRcG5ug4OJIDQT9zeyfTrtoWJYnoDEz2D_SBlfUr1NvJTGu7Ng8-WUttrtO5hpwLNr0EtpvKrj7Znwk/pubhtml?gid=1745432149&amp;single=true">Version Google Sheets</a></p><details><summary>Champs du journal et exemple reproductible</summary><ul><li>Pays ou juridiction</li><li>Sujet à vérifier</li><li>Autorité</li><li>URL du texte</li><li>Date du texte</li><li>Date de vérification</li><li>État VERIFIED / MISSING / OUTDATED</li><li>Question non résolue</li></ul><h3>Entrée fictive</h3><pre><code>{
+  &quot;records&quot;: [
+    {
+      &quot;id&quot;: &quot;pays-a&quot;,
+      &quot;state&quot;: &quot;OUTDATED&quot;
+    },
+    {
+      &quot;id&quot;: &quot;pays-b&quot;,
+      &quot;state&quot;: &quot;MISSING&quot;
+    }
+  ]
+}</code></pre><h3>Résultat de cet exemple</h3><pre><code>{
+  &quot;engine&quot;: &quot;evidence_summary&quot;,
+  &quot;example_type&quot;: &quot;FICTIONAL_INPUTS_COMPUTED_OUTPUT&quot;,
+  &quot;output&quot;: {
+    &quot;counts&quot;: {
+      &quot;MISSING&quot;: 1,
+      &quot;OUTDATED&quot;: 1,
+      &quot;VERIFIED&quot;: 0
+    },
+    &quot;limitation&quot;: &quot;VERIFIED is the user&#x27;s declared state; this tool does not verify a source.&quot;,
+    &quot;needs_review&quot;: 2
+  }
+}</code></pre><h3>Commande locale</h3><pre><code>python -X utf8 run.py evidence_summary resources/cbd-sources/exemple-fictif.json</code></pre><p><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/cbd-sources/exemple-fictif.json">Télécharger cette entrée JSON</a> · <a href="https://github.com/vocalisia/outils-pratiques/tree/main/resources/cbd-sources">Notice et fichiers sources</a></p></details><p><a href="#catalogue">Retour au catalogue</a></p></section><section id="epargne-budget" aria-labelledby="heading-epargne-budget"><h2 id="heading-epargne-budget">Budget mensuel d&#x27;un scénario de retraite</h2><p>Séparer dépenses, revenus et marge de sécurité pour visualiser un écart mensuel sous hypothèses choisies.</p><p><strong>Limite :</strong> <span>Aucun droit AVS, LPP, montant de rente, plafond fiscal ou capital de retraite n&#x27;est estimé.</span></p><p>Site associé : <a href="https://epargne-suisse.ch/">epargne-suisse.ch</a>. Ressource proposée dans le cadre de son portefeuille éditorial.</p><p class="downloads"><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/epargne-budget/modele.xlsx">Journal Excel</a> · <a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/epargne-budget/trame.csv">Trame CSV</a> · <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRcG5ug4OJIDQT9zeyfTrtoWJYnoDEz2D_SBlfUr1NvJTGu7Ng8-WUttrtO5hpwLNr0EtpvKrj7Znwk/pubhtml?gid=1805441902&amp;single=true">Version Google Sheets</a></p><details><summary>Champs du journal et exemple reproductible</summary><ul><li>Poste</li><li>Montant mensuel choisi</li><li>Devise</li><li>Régulier ou ponctuel</li><li>Source</li><li>Hypothèse à confirmer</li></ul><h3>Entrée fictive</h3><pre><code>{
+  &quot;buffer&quot;: 250,
+  &quot;expenses&quot;: 4200,
+  &quot;income&quot;: 3500
+}</code></pre><h3>Résultat de cet exemple</h3><pre><code>{
+  &quot;engine&quot;: &quot;budget_gap&quot;,
+  &quot;example_type&quot;: &quot;FICTIONAL_INPUTS_COMPUTED_OUTPUT&quot;,
+  &quot;output&quot;: {
+    &quot;monthly_gap&quot;: 950.0,
+    &quot;monthly_need&quot;: 4450.0,
+    &quot;monthly_surplus&quot;: 0
+  }
+}</code></pre><h3>Commande locale</h3><pre><code>python -X utf8 run.py budget_gap resources/epargne-budget/exemple-fictif.json</code></pre><p><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/epargne-budget/exemple-fictif.json">Télécharger cette entrée JSON</a> · <a href="https://github.com/vocalisia/outils-pratiques/tree/main/resources/epargne-budget">Notice et fichiers sources</a></p></details><p><a href="#catalogue">Retour au catalogue</a></p></section><section id="immo-comparables" aria-labelledby="heading-immo-comparables"><h2 id="heading-immo-comparables">Lecture arithmétique de comparables immobiliers</h2><p>Calculer les prix par unité de surface et leur médiane tout en conservant la provenance des comparables.</p><p><strong>Limite :</strong> <span>Une médiane de prix affichés n&#x27;est pas une valeur vénale. Aucune correction d&#x27;emplacement, de qualité ou de date n&#x27;est automatique.</span></p><p>Site associé : <a href="https://estimation-bien.ch/">estimation-bien.ch</a>. Ressource proposée dans le cadre de son portefeuille éditorial.</p><p class="downloads"><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/immo-comparables/modele.xlsx">Journal Excel</a> · <a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/immo-comparables/trame.csv">Trame CSV</a> · <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRcG5ug4OJIDQT9zeyfTrtoWJYnoDEz2D_SBlfUr1NvJTGu7Ng8-WUttrtO5hpwLNr0EtpvKrj7Znwk/pubhtml?gid=2100662691&amp;single=true">Version Google Sheets</a></p><details><summary>Champs du journal et exemple reproductible</summary><ul><li>Bien comparable</li><li>Prix observé</li><li>Surface et unité</li><li>Date d&#x27;observation</li><li>Type de surface</li><li>Localisation</li><li>Source</li><li>Différences à documenter</li></ul><h3>Entrée fictive</h3><pre><code>{
+  &quot;properties&quot;: [
+    {
+      &quot;area&quot;: 100,
+      &quot;price&quot;: 500000
+    },
+    {
+      &quot;area&quot;: 100,
+      &quot;price&quot;: 600000
+    },
+    {
+      &quot;area&quot;: 100,
+      &quot;price&quot;: 700000
+    }
+  ]
+}</code></pre><h3>Résultat de cet exemple</h3><pre><code>{
+  &quot;engine&quot;: &quot;comparables&quot;,
+  &quot;example_type&quot;: &quot;FICTIONAL_INPUTS_COMPUTED_OUTPUT&quot;,
+  &quot;output&quot;: {
+    &quot;count&quot;: 3,
+    &quot;limitation&quot;: &quot;Unadjusted arithmetic of supplied observations, not a property appraisal.&quot;,
+    &quot;median_price_per_area&quot;: 6000.0,
+    &quot;price_per_area&quot;: [
+      5000.0,
+      6000.0,
+      7000.0
+    ]
+  }
+}</code></pre><h3>Commande locale</h3><pre><code>python -X utf8 run.py comparables resources/immo-comparables/exemple-fictif.json</code></pre><p><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/immo-comparables/exemple-fictif.json">Télécharger cette entrée JSON</a> · <a href="https://github.com/vocalisia/outils-pratiques/tree/main/resources/immo-comparables">Notice et fichiers sources</a></p></details><p><a href="#catalogue">Retour au catalogue</a></p></section><section id="succession-documents" aria-labelledby="heading-succession-documents"><h2 id="heading-succession-documents">Inventaire des documents d&#x27;un bien hérité</h2><p>Organiser les pièces immobilières disponibles et les questions à soumettre aux professionnels concernés.</p><p><strong>Limite :</strong> <span>Le modèle ne détermine ni héritiers, ni parts, ni droits, ni obligation fiscale ou délai juridique.</span></p><p>Site associé : <a href="https://estimation-succession.ch/">estimation-succession.ch</a>. Ressource proposée dans le cadre de son portefeuille éditorial.</p><p class="downloads"><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/succession-documents/modele.xlsx">Journal Excel</a> · <a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/succession-documents/trame.csv">Trame CSV</a> · <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRcG5ug4OJIDQT9zeyfTrtoWJYnoDEz2D_SBlfUr1NvJTGu7Ng8-WUttrtO5hpwLNr0EtpvKrj7Znwk/pubhtml?gid=1000640045&amp;single=true">Version Google Sheets</a></p><details><summary>Champs du journal et exemple reproductible</summary><ul><li>Document ou question</li><li>Bien concerné dans copie privée</li><li>Détenteur de la pièce</li><li>Version ou date</li><li>Emplacement privé</li><li>État VERIFIED / MISSING / OUTDATED</li><li>Prochaine démarche à valider</li></ul><h3>Entrée fictive</h3><pre><code>{
+  &quot;records&quot;: [
+    {
+      &quot;id&quot;: &quot;plan-bien&quot;,
+      &quot;state&quot;: &quot;VERIFIED&quot;
+    },
+    {
+      &quot;id&quot;: &quot;estimation&quot;,
+      &quot;state&quot;: &quot;MISSING&quot;
+    }
+  ]
+}</code></pre><h3>Résultat de cet exemple</h3><pre><code>{
+  &quot;engine&quot;: &quot;evidence_summary&quot;,
+  &quot;example_type&quot;: &quot;FICTIONAL_INPUTS_COMPUTED_OUTPUT&quot;,
+  &quot;output&quot;: {
+    &quot;counts&quot;: {
+      &quot;MISSING&quot;: 1,
+      &quot;OUTDATED&quot;: 0,
+      &quot;VERIFIED&quot;: 1
+    },
+    &quot;limitation&quot;: &quot;VERIFIED is the user&#x27;s declared state; this tool does not verify a source.&quot;,
+    &quot;needs_review&quot;: 1
+  }
+}</code></pre><h3>Commande locale</h3><pre><code>python -X utf8 run.py evidence_summary resources/succession-documents/exemple-fictif.json</code></pre><p><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/succession-documents/exemple-fictif.json">Télécharger cette entrée JSON</a> · <a href="https://github.com/vocalisia/outils-pratiques/tree/main/resources/succession-documents">Notice et fichiers sources</a></p></details><p><a href="#catalogue">Retour au catalogue</a></p></section><section id="iapme-temps-net" aria-labelledby="heading-iapme-temps-net"><h2 id="heading-iapme-temps-net">Bilan de temps et de coût d&#x27;une automatisation</h2><p>Distinguer le temps net économisé, le coût récurrent et un délai de récupération purement calculé.</p><p><strong>Limite :</strong> <span>Le calcul suppose des gains répétables, des coûts stables et aucun autre coût ; les montants d&#x27;exemple sont fictifs.</span></p><p>Site associé : <a href="https://iapmesuisse.ch/">iapmesuisse.ch</a>. Ressource proposée dans le cadre de son portefeuille éditorial.</p><p class="downloads"><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/iapme-temps-net/modele.xlsx">Journal Excel</a> · <a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/iapme-temps-net/trame.csv">Trame CSV</a> · <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRcG5ug4OJIDQT9zeyfTrtoWJYnoDEz2D_SBlfUr1NvJTGu7Ng8-WUttrtO5hpwLNr0EtpvKrj7Znwk/pubhtml?gid=2104951241&amp;single=true">Version Google Sheets</a></p><details><summary>Champs du journal et exemple reproductible</summary><ul><li>Processus</li><li>Minutes nettes économisées par exécution</li><li>Exécutions mensuelles</li><li>Coût horaire choisi</li><li>Coût mensuel outil</li><li>Mise en place</li><li>Preuve de mesure</li></ul><h3>Entrée fictive</h3><pre><code>{
+  &quot;hourly_cost&quot;: 45,
+  &quot;minutes_saved&quot;: 20,
+  &quot;monthly_cost&quot;: 100,
+  &quot;runs_per_month&quot;: 40,
+  &quot;setup_cost&quot;: 900
+}</code></pre><h3>Résultat de cet exemple</h3><pre><code>{
+  &quot;engine&quot;: &quot;automation_balance&quot;,
+  &quot;example_type&quot;: &quot;FICTIONAL_INPUTS_COMPUTED_OUTPUT&quot;,
+  &quot;output&quot;: {
+    &quot;monthly_hours_saved&quot;: 13.333333,
+    &quot;monthly_net_scenario_value&quot;: 500.0,
+    &quot;simple_payback_months&quot;: 1.8
+  }
+}</code></pre><h3>Commande locale</h3><pre><code>python -X utf8 run.py automation_balance resources/iapme-temps-net/exemple-fictif.json</code></pre><p><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/iapme-temps-net/exemple-fictif.json">Télécharger cette entrée JSON</a> · <a href="https://github.com/vocalisia/outils-pratiques/tree/main/resources/iapme-temps-net">Notice et fichiers sources</a></p></details><p><a href="#catalogue">Retour au catalogue</a></p></section><section id="emploi-candidatures" aria-labelledby="heading-emploi-candidatures"><h2 id="heading-emploi-candidatures">Suivi de candidatures et d&#x27;offres réelles</h2><p>Suivre des candidatures distinctes et vérifier qu&#x27;une offre est encore disponible avant de postuler.</p><p><strong>Limite :</strong> <span>Aucune offre d&#x27;emploi n&#x27;est générée ; les références d&#x27;exemple ne représentent pas des postes ouverts.</span></p><p>Site associé : <a href="https://job-emploi.ch/">job-emploi.ch</a>. Ressource proposée dans le cadre de son portefeuille éditorial.</p><p class="downloads"><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/emploi-candidatures/modele.xlsx">Journal Excel</a> · <a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/emploi-candidatures/trame.csv">Trame CSV</a> · <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRcG5ug4OJIDQT9zeyfTrtoWJYnoDEz2D_SBlfUr1NvJTGu7Ng8-WUttrtO5hpwLNr0EtpvKrj7Znwk/pubhtml?gid=1128250886&amp;single=true">Version Google Sheets</a></p><details><summary>Champs du journal et exemple reproductible</summary><ul><li>Référence de candidature</li><li>Employeur vérifié</li><li>URL de l&#x27;offre</li><li>Date de candidature</li><li>Étape DRAFT / APPLIED / INTERVIEW / OFFER / CLOSED</li><li>Prochaine action</li><li>Dernière vérification de l&#x27;offre</li></ul><h3>Entrée fictive</h3><pre><code>{
+  &quot;applications&quot;: [
+    {
+      &quot;id&quot;: &quot;exemple-a&quot;,
+      &quot;stage&quot;: &quot;APPLIED&quot;
+    },
+    {
+      &quot;id&quot;: &quot;exemple-b&quot;,
+      &quot;stage&quot;: &quot;INTERVIEW&quot;
+    },
+    {
+      &quot;id&quot;: &quot;exemple-c&quot;,
+      &quot;stage&quot;: &quot;CLOSED&quot;
+    }
+  ]
+}</code></pre><h3>Résultat de cet exemple</h3><pre><code>{
+  &quot;engine&quot;: &quot;application_summary&quot;,
+  &quot;example_type&quot;: &quot;FICTIONAL_INPUTS_COMPUTED_OUTPUT&quot;,
+  &quot;output&quot;: {
+    &quot;current_stage_counts&quot;: {
+      &quot;APPLIED&quot;: 1,
+      &quot;CLOSED&quot;: 1,
+      &quot;DRAFT&quot;: 0,
+      &quot;INTERVIEW&quot;: 1,
+      &quot;OFFER&quot;: 0
+    },
+    &quot;limitation&quot;: &quot;Current stage counts, not cumulative conversion rates.&quot;,
+    &quot;total&quot;: 3
+  }
+}</code></pre><h3>Commande locale</h3><pre><code>python -X utf8 run.py application_summary resources/emploi-candidatures/exemple-fictif.json</code></pre><p><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/emploi-candidatures/exemple-fictif.json">Télécharger cette entrée JSON</a> · <a href="https://github.com/vocalisia/outils-pratiques/tree/main/resources/emploi-candidatures">Notice et fichiers sources</a></p></details><p><a href="#catalogue">Retour au catalogue</a></p></section><section id="leadgene-ch-qualification" aria-labelledby="heading-leadgene-ch-qualification"><h2 id="heading-leadgene-ch-qualification">Complétude d&#x27;une qualification commerciale</h2><p>Séparer information connue et information manquante avant une revue humaine.</p><p><strong>Limite :</strong> <span>La complétude ne prédit pas une vente et ne vaut pas autorisation de contact. Un NON documenté reste une information connue.</span></p><p>Site associé : <a href="https://lead-gene.ch/">lead-gene.ch</a>. Ressource proposée dans le cadre de son portefeuille éditorial.</p><p class="downloads"><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/leadgene-ch-qualification/modele.xlsx">Journal Excel</a> · <a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/leadgene-ch-qualification/trame.csv">Trame CSV</a> · <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRcG5ug4OJIDQT9zeyfTrtoWJYnoDEz2D_SBlfUr1NvJTGu7Ng8-WUttrtO5hpwLNr0EtpvKrj7Znwk/pubhtml?gid=1064240014&amp;single=true">Version Google Sheets</a></p><details><summary>Champs du journal et exemple reproductible</summary><ul><li>Adéquation au marché</li><li>Problème confirmé</li><li>Rôle compris</li><li>Moment connu</li><li>Prochaine étape convenue</li><li>Source retrouvable</li></ul><h3>Entrée fictive</h3><pre><code>{
+  &quot;states&quot;: [
+    &quot;OUI&quot;,
+    &quot;INCONNU&quot;,
+    &quot;NON&quot;,
+    &quot;OUI&quot;,
+    &quot;INCONNU&quot;,
+    &quot;OUI&quot;
+  ]
+}</code></pre><h3>Résultat de cet exemple</h3><pre><code>{
+  &quot;engine&quot;: &quot;qualification&quot;,
+  &quot;example_type&quot;: &quot;FICTIONAL_INPUTS_COMPUTED_OUTPUT&quot;,
+  &quot;output&quot;: {
+    &quot;missing&quot;: 2,
+    &quot;state&quot;: &quot;INFORMATIONS À COMPLÉTER&quot;
+  }
+}</code></pre><h3>Commande locale</h3><pre><code>python -X utf8 run.py qualification resources/leadgene-ch-qualification/exemple-fictif.json</code></pre><p><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/leadgene-ch-qualification/exemple-fictif.json">Télécharger cette entrée JSON</a> · <a href="https://github.com/vocalisia/outils-pratiques/tree/main/resources/leadgene-ch-qualification">Notice et fichiers sources</a></p></details><p>Référence pour le contexte : <a href="https://lead-gene.ch/qualification-leads-b2b-suisse">consulter la source institutionnelle</a>.</p><p><a href="#catalogue">Retour au catalogue</a></p></section><section id="leadgene-com-entonnoir" aria-labelledby="heading-leadgene-com-entonnoir"><h2 id="heading-leadgene-com-entonnoir">Conversions d&#x27;un entonnoir commercial</h2><p>Calculer séparément réponse, rendez-vous, présence et vente sur une même cohorte.</p><p><strong>Limite :</strong> <span>Le calcul exige un entonnoir emboîté et des unités identiques. Il ne convient pas aux étapes comptées sur des cohortes différentes.</span></p><p>Site associé : <a href="https://lead-gene.com/">lead-gene.com</a>. Ressource proposée dans le cadre de son portefeuille éditorial.</p><p class="downloads"><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/leadgene-com-entonnoir/modele.xlsx">Journal Excel</a> · <a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/leadgene-com-entonnoir/trame.csv">Trame CSV</a> · <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRcG5ug4OJIDQT9zeyfTrtoWJYnoDEz2D_SBlfUr1NvJTGu7Ng8-WUttrtO5hpwLNr0EtpvKrj7Znwk/pubhtml?gid=955670612&amp;single=true">Version Google Sheets</a></p><details><summary>Champs du journal et exemple reproductible</summary><ul><li>Cohorte et période</li><li>Contacts distincts</li><li>Réponses de la cohorte</li><li>RDV pris</li><li>RDV tenus</li><li>Ventes de la cohorte</li><li>Méthode de dédoublonnage</li></ul><h3>Entrée fictive</h3><pre><code>{
+  &quot;contacts&quot;: 100,
+  &quot;held&quot;: 6,
+  &quot;meetings&quot;: 8,
+  &quot;replies&quot;: 20,
+  &quot;sales&quot;: 2
+}</code></pre><h3>Résultat de cet exemple</h3><pre><code>{
+  &quot;engine&quot;: &quot;funnel&quot;,
+  &quot;example_type&quot;: &quot;FICTIONAL_INPUTS_COMPUTED_OUTPUT&quot;,
+  &quot;output&quot;: {
+    &quot;held_per_meeting&quot;: 0.75,
+    &quot;meeting_per_reply&quot;: 0.4,
+    &quot;reply_fraction&quot;: 0.2,
+    &quot;sale_per_contact&quot;: 0.02,
+    &quot;sale_per_held&quot;: 0.333333
+  }
+}</code></pre><h3>Commande locale</h3><pre><code>python -X utf8 run.py funnel resources/leadgene-com-entonnoir/exemple-fictif.json</code></pre><p><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/leadgene-com-entonnoir/exemple-fictif.json">Télécharger cette entrée JSON</a> · <a href="https://github.com/vocalisia/outils-pratiques/tree/main/resources/leadgene-com-entonnoir">Notice et fichiers sources</a></p></details><p><a href="#catalogue">Retour au catalogue</a></p></section><section id="master-seller-demonstration" aria-labelledby="heading-master-seller-demonstration"><h2 id="heading-master-seller-demonstration">Revue d&#x27;une démonstration de vente IA</h2><p>Contrôler la compréhension du besoin et la démonstration d&#x27;une fonction sans transformer l&#x27;exercice en promesse de revenu.</p><p><strong>Limite :</strong> <span>Ce journal ne certifie pas une qualification professionnelle et ne promet aucune vente.</span></p><p>Site associé : <a href="https://master-seller.fr/">master-seller.fr</a>. Ressource proposée dans le cadre de son portefeuille éditorial.</p><p class="downloads"><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/master-seller-demonstration/modele.xlsx">Journal Excel</a> · <a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/master-seller-demonstration/trame.csv">Trame CSV</a> · <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRcG5ug4OJIDQT9zeyfTrtoWJYnoDEz2D_SBlfUr1NvJTGu7Ng8-WUttrtO5hpwLNr0EtpvKrj7Znwk/pubhtml?gid=2112707093&amp;single=true">Version Google Sheets</a></p><details><summary>Champs du journal et exemple reproductible</summary><ul><li>Compétence observée</li><li>Situation fictive</li><li>Critère d&#x27;acceptation</li><li>Observation</li><li>Statut PASS / FAIL / NOT_RUN</li><li>Correction à préparer</li></ul><h3>Entrée fictive</h3><pre><code>{
+  &quot;cases&quot;: [
+    {
+      &quot;id&quot;: &quot;besoin-reformule&quot;,
+      &quot;status&quot;: &quot;PASS&quot;
+    },
+    {
+      &quot;id&quot;: &quot;limite-produit-expliquee&quot;,
+      &quot;status&quot;: &quot;FAIL&quot;
+    },
+    {
+      &quot;id&quot;: &quot;question-sans-reponse&quot;,
+      &quot;status&quot;: &quot;NOT_RUN&quot;
+    }
+  ]
+}</code></pre><h3>Résultat de cet exemple</h3><pre><code>{
+  &quot;engine&quot;: &quot;test_summary&quot;,
+  &quot;example_type&quot;: &quot;FICTIONAL_INPUTS_COMPUTED_OUTPUT&quot;,
+  &quot;output&quot;: {
+    &quot;counts&quot;: {
+      &quot;FAIL&quot;: 1,
+      &quot;NOT_RUN&quot;: 1,
+      &quot;PASS&quot;: 1
+    },
+    &quot;limitation&quot;: &quot;Counts of supplied records, not independently observed product performance.&quot;,
+    &quot;pass_fraction_of_run_cases&quot;: 0.5,
+    &quot;tested&quot;: 2
+  }
+}</code></pre><h3>Commande locale</h3><pre><code>python -X utf8 run.py test_summary resources/master-seller-demonstration/exemple-fictif.json</code></pre><p><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/master-seller-demonstration/exemple-fictif.json">Télécharger cette entrée JSON</a> · <a href="https://github.com/vocalisia/outils-pratiques/tree/main/resources/master-seller-demonstration">Notice et fichiers sources</a></p></details><p><a href="#catalogue">Retour au catalogue</a></p></section><section id="artisan-devis" aria-labelledby="heading-artisan-devis"><h2 id="heading-artisan-devis">Addition de postes d&#x27;un devis de travaux</h2><p>Recalculer des lignes quantité × prix et isoler les forfaits avant de comparer des périmètres équivalents.</p><p><strong>Limite :</strong> <span>Les chiffres ne sont pas des prix de marché. Aucune TVA, garantie ou subvention n&#x27;est supposée.</span></p><p>Site associé : <a href="https://meilleurartisan.ch/">meilleurartisan.ch</a>. Ressource proposée dans le cadre de son portefeuille éditorial.</p><p class="downloads"><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/artisan-devis/modele.xlsx">Journal Excel</a> · <a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/artisan-devis/trame.csv">Trame CSV</a> · <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRcG5ug4OJIDQT9zeyfTrtoWJYnoDEz2D_SBlfUr1NvJTGu7Ng8-WUttrtO5hpwLNr0EtpvKrj7Znwk/pubhtml?gid=396951469&amp;single=true">Version Google Sheets</a></p><details><summary>Champs du journal et exemple reproductible</summary><ul><li>Lot et périmètre</li><li>Unité</li><li>Quantité</li><li>Prix unitaire du devis réel</li><li>Exclusions</li><li>Forfait complémentaire</li><li>Date et référence du devis</li></ul><h3>Entrée fictive</h3><pre><code>{
+  &quot;fixed_cost&quot;: 50,
+  &quot;lines&quot;: [
+    {
+      &quot;quantity&quot;: 10,
+      &quot;unit_price&quot;: 25
+    },
+    {
+      &quot;quantity&quot;: 2,
+      &quot;unit_price&quot;: 100
+    }
+  ]
+}</code></pre><h3>Résultat de cet exemple</h3><pre><code>{
+  &quot;engine&quot;: &quot;quote_total&quot;,
+  &quot;example_type&quot;: &quot;FICTIONAL_INPUTS_COMPUTED_OUTPUT&quot;,
+  &quot;output&quot;: {
+    &quot;fixed_cost&quot;: 50.0,
+    &quot;line_totals&quot;: [
+      250.0,
+      200.0
+    ],
+    &quot;total&quot;: 500.0
+  }
+}</code></pre><h3>Commande locale</h3><pre><code>python -X utf8 run.py quote_total resources/artisan-devis/exemple-fictif.json</code></pre><p><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/artisan-devis/exemple-fictif.json">Télécharger cette entrée JSON</a> · <a href="https://github.com/vocalisia/outils-pratiques/tree/main/resources/artisan-devis">Notice et fichiers sources</a></p></details><p><a href="#catalogue">Retour au catalogue</a></p></section><section id="prix-m2-provenance" aria-labelledby="heading-prix-m2-provenance"><h2 id="heading-prix-m2-provenance">Provenance des indicateurs immobiliers</h2><p>Conserver unité, périmètre et date avant de rapprocher deux indicateurs au mètre carré.</p><p><strong>Limite :</strong> <span>Aucun indice réel n&#x27;est fourni et un indicateur ne constitue pas une estimation individuelle.</span></p><p>Site associé : <a href="https://prix-m2-suisse.ch/">prix-m2-suisse.ch</a>. Ressource proposée dans le cadre de son portefeuille éditorial.</p><p class="downloads"><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/prix-m2-provenance/modele.xlsx">Journal Excel</a> · <a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/prix-m2-provenance/trame.csv">Trame CSV</a> · <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRcG5ug4OJIDQT9zeyfTrtoWJYnoDEz2D_SBlfUr1NvJTGu7Ng8-WUttrtO5hpwLNr0EtpvKrj7Znwk/pubhtml?gid=414908669&amp;single=true">Version Google Sheets</a></p><details><summary>Champs du journal et exemple reproductible</summary><ul><li>Indicateur</li><li>Valeur et unité</li><li>Périmètre géographique</li><li>Période</li><li>Biens et surface concernés</li><li>Source</li><li>État VERIFIED / MISSING / OUTDATED</li><li>Limite de comparaison</li></ul><h3>Entrée fictive</h3><pre><code>{
+  &quot;records&quot;: [
+    {
+      &quot;id&quot;: &quot;indice-a&quot;,
+      &quot;state&quot;: &quot;VERIFIED&quot;
+    },
+    {
+      &quot;id&quot;: &quot;indice-b&quot;,
+      &quot;state&quot;: &quot;OUTDATED&quot;
+    }
+  ]
+}</code></pre><h3>Résultat de cet exemple</h3><pre><code>{
+  &quot;engine&quot;: &quot;evidence_summary&quot;,
+  &quot;example_type&quot;: &quot;FICTIONAL_INPUTS_COMPUTED_OUTPUT&quot;,
+  &quot;output&quot;: {
+    &quot;counts&quot;: {
+      &quot;MISSING&quot;: 0,
+      &quot;OUTDATED&quot;: 1,
+      &quot;VERIFIED&quot;: 1
+    },
+    &quot;limitation&quot;: &quot;VERIFIED is the user&#x27;s declared state; this tool does not verify a source.&quot;,
+    &quot;needs_review&quot;: 1
+  }
+}</code></pre><h3>Commande locale</h3><pre><code>python -X utf8 run.py evidence_summary resources/prix-m2-provenance/exemple-fictif.json</code></pre><p><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/prix-m2-provenance/exemple-fictif.json">Télécharger cette entrée JSON</a> · <a href="https://github.com/vocalisia/outils-pratiques/tree/main/resources/prix-m2-provenance">Notice et fichiers sources</a></p></details><p><a href="#catalogue">Retour au catalogue</a></p></section><section id="recouvrement-journal" aria-labelledby="heading-recouvrement-journal"><h2 id="heading-recouvrement-journal">Journal des pièces et des échanges d&#x27;une facture</h2><p>Retrouver les pièces et l&#x27;historique sans inventer de délai applicable ou de démarche automatique.</p><p><strong>Limite :</strong> <span>Aucune relance n&#x27;est envoyée et aucune procédure, juridiction ou prescription n&#x27;est déterminée.</span></p><p>Site associé : <a href="https://recouvrementpro.ca/">recouvrementpro.ca</a>. Ressource proposée dans le cadre de son portefeuille éditorial.</p><p class="downloads"><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/recouvrement-journal/modele.xlsx">Journal Excel</a> · <a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/recouvrement-journal/trame.csv">Trame CSV</a> · <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRcG5ug4OJIDQT9zeyfTrtoWJYnoDEz2D_SBlfUr1NvJTGu7Ng8-WUttrtO5hpwLNr0EtpvKrj7Znwk/pubhtml?gid=575294373&amp;single=true">Version Google Sheets</a></p><details><summary>Champs du journal et exemple reproductible</summary><ul><li>Référence anonymisée</li><li>Événement</li><li>Date réelle</li><li>Pièce ou preuve privée</li><li>Réponse obtenue</li><li>Juridiction à confirmer</li><li>État VERIFIED / MISSING / OUTDATED</li><li>Décision humaine</li></ul><h3>Entrée fictive</h3><pre><code>{
+  &quot;records&quot;: [
+    {
+      &quot;id&quot;: &quot;facture&quot;,
+      &quot;state&quot;: &quot;VERIFIED&quot;
+    },
+    {
+      &quot;id&quot;: &quot;preuve-execution&quot;,
+      &quot;state&quot;: &quot;MISSING&quot;
+    }
+  ]
+}</code></pre><h3>Résultat de cet exemple</h3><pre><code>{
+  &quot;engine&quot;: &quot;evidence_summary&quot;,
+  &quot;example_type&quot;: &quot;FICTIONAL_INPUTS_COMPUTED_OUTPUT&quot;,
+  &quot;output&quot;: {
+    &quot;counts&quot;: {
+      &quot;MISSING&quot;: 1,
+      &quot;OUTDATED&quot;: 0,
+      &quot;VERIFIED&quot;: 1
+    },
+    &quot;limitation&quot;: &quot;VERIFIED is the user&#x27;s declared state; this tool does not verify a source.&quot;,
+    &quot;needs_review&quot;: 1
+  }
+}</code></pre><h3>Commande locale</h3><pre><code>python -X utf8 run.py evidence_summary resources/recouvrement-journal/exemple-fictif.json</code></pre><p><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/recouvrement-journal/exemple-fictif.json">Télécharger cette entrée JSON</a> · <a href="https://github.com/vocalisia/outils-pratiques/tree/main/resources/recouvrement-journal">Notice et fichiers sources</a></p></details><p><a href="#catalogue">Retour au catalogue</a></p></section><section id="lamal-scenario" aria-labelledby="heading-lamal-scenario"><h2 id="heading-lamal-scenario">Budget annuel sous hypothèses choisies</h2><p>Additionner douze primes et un reste à charge explicitement choisi, sans prétendre calculer le remboursement réel.</p><p><strong>Limite :</strong> <span>Ce modèle indépendant n&#x27;est pas Priminfo et ne recommande pas de franchise. Il ne calcule pas les prestations d&#x27;assurance ou les dépenses de santé.</span></p><p>Site associé : <a href="https://sante-lamal.ch/">sante-lamal.ch</a>. Ressource proposée dans le cadre de son portefeuille éditorial.</p><p class="downloads"><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/lamal-scenario/modele.xlsx">Journal Excel</a> · <a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/lamal-scenario/trame.csv">Trame CSV</a> · <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRcG5ug4OJIDQT9zeyfTrtoWJYnoDEz2D_SBlfUr1NvJTGu7Ng8-WUttrtO5hpwLNr0EtpvKrj7Znwk/pubhtml?gid=2081325333&amp;single=true">Version Google Sheets</a></p><details><summary>Champs du journal et exemple reproductible</summary><ul><li>Contrat ou variante</li><li>Prime mensuelle vérifiée</li><li>Année de la prime</li><li>Reste à charge choisi pour le scénario</li><li>Source officielle</li><li>Hypothèses à vérifier</li></ul><h3>Entrée fictive</h3><pre><code>{
+  &quot;assumed_out_of_pocket&quot;: 700,
+  &quot;monthly_premium&quot;: 350
+}</code></pre><h3>Résultat de cet exemple</h3><pre><code>{
+  &quot;engine&quot;: &quot;annual_scenario&quot;,
+  &quot;example_type&quot;: &quot;FICTIONAL_INPUTS_COMPUTED_OUTPUT&quot;,
+  &quot;output&quot;: {
+    &quot;annual_scenario_total&quot;: 4900.0,
+    &quot;assumed_out_of_pocket&quot;: 700.0,
+    &quot;twelve_premiums&quot;: 4200.0
+  }
+}</code></pre><h3>Commande locale</h3><pre><code>python -X utf8 run.py annual_scenario resources/lamal-scenario/exemple-fictif.json</code></pre><p><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/lamal-scenario/exemple-fictif.json">Télécharger cette entrée JSON</a> · <a href="https://github.com/vocalisia/outils-pratiques/tree/main/resources/lamal-scenario">Notice et fichiers sources</a></p></details><p>Référence pour le contexte : <a href="https://www.bag.admin.ch/fr/priminfo-le-calculateur-de-primes-officiel-de-la-confederation">consulter la source institutionnelle</a>.</p><p><a href="#catalogue">Retour au catalogue</a></p></section><section id="seo-swiss-html" aria-labelledby="heading-seo-swiss-html"><h2 id="heading-seo-swiss-html">Contrôle local d&#x27;un document HTML</h2><p>Lire titre, H1, langue, canonical et robots dans une chaîne HTML locale, sans requête réseau.</p><p><strong>Limite :</strong> <span>Le résultat n&#x27;est pas un rendu JavaScript, un test HTTP ou une preuve d&#x27;indexation. Les valeurs fournies viennent du seul document analysé.</span></p><p>Site associé : <a href="https://seo-swiss.ch/">seo-swiss.ch</a>. Ressource proposée dans le cadre de son portefeuille éditorial.</p><p class="downloads"><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/seo-swiss-html/modele.xlsx">Journal Excel</a> · <a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/seo-swiss-html/trame.csv">Trame CSV</a> · <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRcG5ug4OJIDQT9zeyfTrtoWJYnoDEz2D_SBlfUr1NvJTGu7Ng8-WUttrtO5hpwLNr0EtpvKrj7Znwk/pubhtml?gid=1286806056&amp;single=true">Version Google Sheets</a></p><details><summary>Champs du journal et exemple reproductible</summary><ul><li>URL observée</li><li>Date de capture</li><li>HTTP mesuré séparément</li><li>Titre</li><li>H1</li><li>Canonical déclaré</li><li>Robots déclaré</li><li>Vérification GSC distincte</li></ul><h3>Entrée fictive</h3><pre><code>{
+  &quot;html&quot;: &quot;&lt;html lang=\&quot;fr\&quot;&gt;&lt;head&gt;&lt;title&gt;Exemple&lt;/title&gt;&lt;link rel=\&quot;canonical\&quot; href=\&quot;https://example.org/\&quot;&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;Exemple fictif&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;
+}</code></pre><h3>Résultat de cet exemple</h3><pre><code>{
+  &quot;engine&quot;: &quot;html_audit&quot;,
+  &quot;example_type&quot;: &quot;FICTIONAL_INPUTS_COMPUTED_OUTPUT&quot;,
+  &quot;output&quot;: {
+    &quot;declared_canonicals&quot;: [
+      &quot;https://example.org/&quot;
+    ],
+    &quot;declared_robots&quot;: [],
+    &quot;h1&quot;: [
+      &quot;Exemple fictif&quot;
+    ],
+    &quot;indexation&quot;: &quot;NOT_TESTED&quot;,
+    &quot;lang&quot;: &quot;fr&quot;,
+    &quot;title&quot;: &quot;Exemple&quot;
+  }
+}</code></pre><h3>Commande locale</h3><pre><code>python -X utf8 run.py html_audit resources/seo-swiss-html/exemple-fictif.json</code></pre><p><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/seo-swiss-html/exemple-fictif.json">Télécharger cette entrée JSON</a> · <a href="https://github.com/vocalisia/outils-pratiques/tree/main/resources/seo-swiss-html">Notice et fichiers sources</a></p></details><p><a href="#catalogue">Retour au catalogue</a></p></section><section id="seo-true-sitemap" aria-labelledby="heading-seo-true-sitemap"><h2 id="heading-seo-true-sitemap">Contrôle local d&#x27;un sitemap XML</h2><p>Distinguer sitemap d&#x27;URL et index de sitemaps, compter les entrées et repérer les doublons exacts hors ligne.</p><p><strong>Limite :</strong> <span>Aucune URL n&#x27;est téléchargée et aucune indexation n&#x27;est inférée de sa présence dans le XML.</span></p><p>Site associé : <a href="https://seo-true.com/">seo-true.com</a>. Ressource proposée dans le cadre de son portefeuille éditorial.</p><p class="downloads"><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/seo-true-sitemap/modele.xlsx">Journal Excel</a> · <a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/seo-true-sitemap/trame.csv">Trame CSV</a> · <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRcG5ug4OJIDQT9zeyfTrtoWJYnoDEz2D_SBlfUr1NvJTGu7Ng8-WUttrtO5hpwLNr0EtpvKrj7Znwk/pubhtml?gid=1414420219&amp;single=true">Version Google Sheets</a></p><details><summary>Champs du journal et exemple reproductible</summary><ul><li>URL déclarée</li><li>Type d&#x27;entrée</li><li>Doublon exact</li><li>HTTP à vérifier</li><li>Canonical à vérifier</li><li>État Google à vérifier</li></ul><h3>Entrée fictive</h3><pre><code>{
+  &quot;xml&quot;: &quot;&lt;urlset xmlns=\&quot;http://www.sitemaps.org/schemas/sitemap/0.9\&quot;&gt;&lt;url&gt;&lt;loc&gt;https://example.org/a&lt;/loc&gt;&lt;/url&gt;&lt;url&gt;&lt;loc&gt;https://example.org/a&lt;/loc&gt;&lt;/url&gt;&lt;/urlset&gt;&quot;
+}</code></pre><h3>Résultat de cet exemple</h3><pre><code>{
+  &quot;engine&quot;: &quot;sitemap_audit&quot;,
+  &quot;example_type&quot;: &quot;FICTIONAL_INPUTS_COMPUTED_OUTPUT&quot;,
+  &quot;output&quot;: {
+    &quot;child_sitemaps_fetched&quot;: false,
+    &quot;duplicates&quot;: [
+      &quot;https://example.org/a&quot;
+    ],
+    &quot;entries&quot;: 2,
+    &quot;indexation&quot;: &quot;NOT_TESTED&quot;,
+    &quot;kind&quot;: &quot;urlset&quot;,
+    &quot;unique_locations&quot;: 1
+  }
+}</code></pre><h3>Commande locale</h3><pre><code>python -X utf8 run.py sitemap_audit resources/seo-true-sitemap/exemple-fictif.json</code></pre><p><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/seo-true-sitemap/exemple-fictif.json">Télécharger cette entrée JSON</a> · <a href="https://github.com/vocalisia/outils-pratiques/tree/main/resources/seo-true-sitemap">Notice et fichiers sources</a></p></details><p><a href="#catalogue">Retour au catalogue</a></p></section><section id="stock-market-fx" aria-labelledby="heading-stock-market-fx"><h2 id="heading-stock-market-fx" lang="en">Cross-currency purchase cost worksheet</h2><p lang="en">Convert a hypothetical purchase using an explicit exchange-rate direction, then add the supplied commission.</p><p><strong>Limite :</strong> <span lang="en">No market quote or FX rate is fetched. Taxes, spread and future returns are excluded unless included explicitly in the inputs.</span></p><p>Site associé : <a href="https://stock-market.ch/">stock-market.ch</a>. Ressource proposée dans le cadre de son portefeuille éditorial.</p><p class="downloads"><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/stock-market-fx/modele.xlsx">Journal Excel</a> · <a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/stock-market-fx/trame.csv">Trame CSV</a> · <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRcG5ug4OJIDQT9zeyfTrtoWJYnoDEz2D_SBlfUr1NvJTGu7Ng8-WUttrtO5hpwLNr0EtpvKrj7Znwk/pubhtml?gid=689036431&amp;single=true">Version Google Sheets</a></p><details><summary>Champs du journal et exemple reproductible</summary><ul><li>Instrument reference</li><li>Quantity</li><li>Unit price in quote currency</li><li>Home units per quote unit</li><li>Commission in home currency</li><li>Source and timestamp</li><li>Other excluded costs</li></ul><h3>Entrée fictive</h3><pre><code>{
+  &quot;commission&quot;: 5,
+  &quot;fx_rate&quot;: 0.9,
+  &quot;quantity&quot;: 10,
+  &quot;unit_price&quot;: 100
+}</code></pre><h3>Résultat de cet exemple</h3><pre><code>{
+  &quot;engine&quot;: &quot;fx_cost&quot;,
+  &quot;example_type&quot;: &quot;FICTIONAL_INPUTS_COMPUTED_OUTPUT&quot;,
+  &quot;output&quot;: {
+    &quot;home_currency_notional&quot;: 900.0,
+    &quot;home_currency_total&quot;: 905.0,
+    &quot;quote_currency_notional&quot;: 1000.0
+  }
+}</code></pre><h3>Commande locale</h3><pre><code>python -X utf8 run.py fx_cost resources/stock-market-fx/exemple-fictif.json</code></pre><p><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/stock-market-fx/exemple-fictif.json">Télécharger cette entrée JSON</a> · <a href="https://github.com/vocalisia/outils-pratiques/tree/main/resources/stock-market-fx">Notice et fichiers sources</a></p></details><p><a href="#catalogue">Retour au catalogue</a></p></section><section id="suisy-decision" aria-labelledby="heading-suisy-decision"><h2 id="heading-suisy-decision">Matrice de décision pondérée</h2><p>Comparer des options à critères et poids explicites, en conservant les preuves qui justifient chaque note.</p><p><strong>Limite :</strong> <span>Les notes sont des choix de l&#x27;utilisateur, pas une mesure indépendante. Aucune marque n&#x27;est placée première automatiquement ; les égalités sont conservées.</span></p><p>Site associé : <a href="https://suisy.ch/">suisy.ch</a>. Ressource proposée dans le cadre de son portefeuille éditorial.</p><p class="downloads"><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/suisy-decision/modele.xlsx">Journal Excel</a> · <a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/suisy-decision/trame.csv">Trame CSV</a> · <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRcG5ug4OJIDQT9zeyfTrtoWJYnoDEz2D_SBlfUr1NvJTGu7Ng8-WUttrtO5hpwLNr0EtpvKrj7Znwk/pubhtml?gid=1142896683&amp;single=true">Version Google Sheets</a></p><details><summary>Champs du journal et exemple reproductible</summary><ul><li>Critère choisi</li><li>Poids choisi</li><li>Note option A entre 0 et 5</li><li>Preuve option A</li><li>Note option B entre 0 et 5</li><li>Preuve option B</li><li>Date</li></ul><h3>Entrée fictive</h3><pre><code>{
+  &quot;options&quot;: [
+    {
+      &quot;id&quot;: &quot;option-a&quot;,
+      &quot;scores&quot;: [
+        4,
+        2
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;option-b&quot;,
+      &quot;scores&quot;: [
+        3,
+        5
+      ]
+    }
+  ],
+  &quot;weights&quot;: [
+    2,
+    1
+  ]
+}</code></pre><h3>Résultat de cet exemple</h3><pre><code>{
+  &quot;engine&quot;: &quot;weighted_matrix&quot;,
+  &quot;example_type&quot;: &quot;FICTIONAL_INPUTS_COMPUTED_OUTPUT&quot;,
+  &quot;output&quot;: {
+    &quot;highest_scoring_ids&quot;: [
+      &quot;option-b&quot;
+    ],
+    &quot;scores&quot;: [
+      {
+        &quot;id&quot;: &quot;option-a&quot;,
+        &quot;weighted_score&quot;: 3.333333
+      },
+      {
+        &quot;id&quot;: &quot;option-b&quot;,
+        &quot;weighted_score&quot;: 3.666667
+      }
+    ],
+    &quot;tie&quot;: false
+  }
+}</code></pre><h3>Commande locale</h3><pre><code>python -X utf8 run.py weighted_matrix resources/suisy-decision/exemple-fictif.json</code></pre><p><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/suisy-decision/exemple-fictif.json">Télécharger cette entrée JSON</a> · <a href="https://github.com/vocalisia/outils-pratiques/tree/main/resources/suisy-decision">Notice et fichiers sources</a></p></details><p><a href="#catalogue">Retour au catalogue</a></p></section><section id="tesla-ca-consommation" aria-labelledby="heading-tesla-ca-consommation"><h2 id="heading-tesla-ca-consommation">Journal de consommation électrique observée</h2><p>Ramener une mesure en kWh à 100 km en précisant si l&#x27;énergie vient de la batterie ou du compteur.</p><p><strong>Limite :</strong> <span>Aucune autonomie, efficacité hivernale ou performance d&#x27;un véhicule réel n&#x27;est affirmée à partir de l&#x27;exemple.</span></p><p>Site associé : <a href="https://tesla-mag.ca/">tesla-mag.ca</a>. Ressource proposée dans le cadre de son portefeuille éditorial.</p><p class="downloads"><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/tesla-ca-consommation/modele.xlsx">Journal Excel</a> · <a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/tesla-ca-consommation/trame.csv">Trame CSV</a> · <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRcG5ug4OJIDQT9zeyfTrtoWJYnoDEz2D_SBlfUr1NvJTGu7Ng8-WUttrtO5hpwLNr0EtpvKrj7Znwk/pubhtml?gid=692366324&amp;single=true">Version Google Sheets</a></p><details><summary>Champs du journal et exemple reproductible</summary><ul><li>Trajet fictif ou observé</li><li>Distance km</li><li>Énergie kWh</li><li>Énergie batterie ou compteur</li><li>Conditions et température</li><li>Date</li><li>Source de mesure</li></ul><h3>Entrée fictive</h3><pre><code>{
+  &quot;distance_km&quot;: 250,
+  &quot;energy_kwh&quot;: 47.5
+}</code></pre><h3>Résultat de cet exemple</h3><pre><code>{
+  &quot;engine&quot;: &quot;consumption&quot;,
+  &quot;example_type&quot;: &quot;FICTIONAL_INPUTS_COMPUTED_OUTPUT&quot;,
+  &quot;output&quot;: {
+    &quot;kwh_per_100km&quot;: 19.0
+  }
+}</code></pre><h3>Commande locale</h3><pre><code>python -X utf8 run.py consumption resources/tesla-ca-consommation/exemple-fictif.json</code></pre><p><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/tesla-ca-consommation/exemple-fictif.json">Télécharger cette entrée JSON</a> · <a href="https://github.com/vocalisia/outils-pratiques/tree/main/resources/tesla-ca-consommation">Notice et fichiers sources</a></p></details><p><a href="#catalogue">Retour au catalogue</a></p></section><section id="tesla-ch-puissance" aria-labelledby="heading-tesla-ch-puissance"><h2 id="heading-tesla-ch-puissance">Puissance nominale d&#x27;un ensemble de panneaux</h2><p>Convertir nombre × puissance nominale en kWc sans confondre puissance et production énergétique.</p><p><strong>Limite :</strong> <span>Le calcul ne donne ni kWh annuels, ni rendement, ni rentabilité ou dimensionnement professionnel.</span></p><p>Site associé : <a href="https://tesla-mag.ch/">tesla-mag.ch</a>. Ressource proposée dans le cadre de son portefeuille éditorial.</p><p class="downloads"><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/tesla-ch-puissance/modele.xlsx">Journal Excel</a> · <a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/tesla-ch-puissance/trame.csv">Trame CSV</a> · <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRcG5ug4OJIDQT9zeyfTrtoWJYnoDEz2D_SBlfUr1NvJTGu7Ng8-WUttrtO5hpwLNr0EtpvKrj7Znwk/pubhtml?gid=2072456522&amp;single=true">Version Google Sheets</a></p><details><summary>Champs du journal et exemple reproductible</summary><ul><li>Référence du panneau</li><li>Nombre</li><li>Puissance nominale Wc par panneau</li><li>Puissance totale kWc</li><li>Fiche technique</li><li>Conditions à vérifier</li></ul><h3>Entrée fictive</h3><pre><code>{
+  &quot;panels&quot;: 12,
+  &quot;watts_each&quot;: 450
+}</code></pre><h3>Résultat de cet exemple</h3><pre><code>{
+  &quot;engine&quot;: &quot;panel_power&quot;,
+  &quot;example_type&quot;: &quot;FICTIONAL_INPUTS_COMPUTED_OUTPUT&quot;,
+  &quot;output&quot;: {
+    &quot;annual_kwh&quot;: null,
+    &quot;nominal_kw&quot;: 5.4,
+    &quot;nominal_watts&quot;: 5400.0
+  }
+}</code></pre><h3>Commande locale</h3><pre><code>python -X utf8 run.py panel_power resources/tesla-ch-puissance/exemple-fictif.json</code></pre><p><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/tesla-ch-puissance/exemple-fictif.json">Télécharger cette entrée JSON</a> · <a href="https://github.com/vocalisia/outils-pratiques/tree/main/resources/tesla-ch-puissance">Notice et fichiers sources</a></p></details><p><a href="#catalogue">Retour au catalogue</a></p></section><section id="trust-vault-comparaison" aria-labelledby="heading-trust-vault-comparaison"><h2 id="heading-trust-vault-comparaison">Comparaison reproductible d&#x27;outils sur une tâche</h2><p>Tester des outils sur une même entrée avant de produire un classement dépendant du besoin.</p><p><strong>Limite :</strong> <span>Aucun outil réel n&#x27;est noté dans les exemples. L&#x27;affiliation et les conditions d&#x27;essai doivent accompagner une comparaison publiée.</span></p><p>Site associé : <a href="https://trust-vault.com/">trust-vault.com</a>. Ressource proposée dans le cadre de son portefeuille éditorial.</p><p class="downloads"><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/trust-vault-comparaison/modele.xlsx">Journal Excel</a> · <a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/trust-vault-comparaison/trame.csv">Trame CSV</a> · <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRcG5ug4OJIDQT9zeyfTrtoWJYnoDEz2D_SBlfUr1NvJTGu7Ng8-WUttrtO5hpwLNr0EtpvKrj7Znwk/pubhtml?gid=771566644&amp;single=true">Version Google Sheets</a></p><details><summary>Champs du journal et exemple reproductible</summary><ul><li>Tâche commune</li><li>Outil et version</li><li>Entrée identique</li><li>Résultat attendu</li><li>Résultat observé</li><li>Statut PASS / FAIL / NOT_RUN</li><li>Temps et coût mesurés</li><li>Conditions</li></ul><h3>Entrée fictive</h3><pre><code>{
+  &quot;cases&quot;: [
+    {
+      &quot;id&quot;: &quot;outil-a-tache-1&quot;,
+      &quot;status&quot;: &quot;PASS&quot;
+    },
+    {
+      &quot;id&quot;: &quot;outil-b-tache-1&quot;,
+      &quot;status&quot;: &quot;FAIL&quot;
+    }
+  ]
+}</code></pre><h3>Résultat de cet exemple</h3><pre><code>{
+  &quot;engine&quot;: &quot;test_summary&quot;,
+  &quot;example_type&quot;: &quot;FICTIONAL_INPUTS_COMPUTED_OUTPUT&quot;,
+  &quot;output&quot;: {
+    &quot;counts&quot;: {
+      &quot;FAIL&quot;: 1,
+      &quot;NOT_RUN&quot;: 0,
+      &quot;PASS&quot;: 1
+    },
+    &quot;limitation&quot;: &quot;Counts of supplied records, not independently observed product performance.&quot;,
+    &quot;pass_fraction_of_run_cases&quot;: 0.5,
+    &quot;tested&quot;: 2
+  }
+}</code></pre><h3>Commande locale</h3><pre><code>python -X utf8 run.py test_summary resources/trust-vault-comparaison/exemple-fictif.json</code></pre><p><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/trust-vault-comparaison/exemple-fictif.json">Télécharger cette entrée JSON</a> · <a href="https://github.com/vocalisia/outils-pratiques/tree/main/resources/trust-vault-comparaison">Notice et fichiers sources</a></p></details><p><a href="#catalogue">Retour au catalogue</a></p></section><section id="trustly-prompt-evaluation" aria-labelledby="heading-trustly-prompt-evaluation"><h2 id="heading-trustly-prompt-evaluation" lang="en">Prompt-pack acceptance test log</h2><p lang="en">Evaluate a prompt pack against explicit fixtures, edge cases and reproducible acceptance criteria.</p><p><strong>Limite :</strong> <span lang="en">The example statuses are fictional. No income, savings or paid-model performance is claimed, and this tool calls no model API.</span></p><p>Site associé : <a href="https://trustly-ai.com/">trustly-ai.com</a>. Ressource proposée dans le cadre de son portefeuille éditorial.</p><p class="downloads"><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/trustly-prompt-evaluation/modele.xlsx">Journal Excel</a> · <a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/trustly-prompt-evaluation/trame.csv">Trame CSV</a> · <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRcG5ug4OJIDQT9zeyfTrtoWJYnoDEz2D_SBlfUr1NvJTGu7Ng8-WUttrtO5hpwLNr0EtpvKrj7Znwk/pubhtml?gid=625709117&amp;single=true">Version Google Sheets</a></p><details><summary>Champs du journal et exemple reproductible</summary><ul><li>Prompt identifier</li><li>Input fixture</li><li>Model and version used</li><li>Acceptance criterion</li><li>Observed output reference</li><li>Status PASS / FAIL / NOT_RUN</li><li>Reproduction steps</li></ul><h3>Entrée fictive</h3><pre><code>{
+  &quot;cases&quot;: [
+    {
+      &quot;id&quot;: &quot;format-check&quot;,
+      &quot;status&quot;: &quot;PASS&quot;
+    },
+    {
+      &quot;id&quot;: &quot;edge-case&quot;,
+      &quot;status&quot;: &quot;FAIL&quot;
+    },
+    {
+      &quot;id&quot;: &quot;repeatability&quot;,
+      &quot;status&quot;: &quot;NOT_RUN&quot;
+    }
+  ]
+}</code></pre><h3>Résultat de cet exemple</h3><pre><code>{
+  &quot;engine&quot;: &quot;test_summary&quot;,
+  &quot;example_type&quot;: &quot;FICTIONAL_INPUTS_COMPUTED_OUTPUT&quot;,
+  &quot;output&quot;: {
+    &quot;counts&quot;: {
+      &quot;FAIL&quot;: 1,
+      &quot;NOT_RUN&quot;: 1,
+      &quot;PASS&quot;: 1
+    },
+    &quot;limitation&quot;: &quot;Counts of supplied records, not independently observed product performance.&quot;,
+    &quot;pass_fraction_of_run_cases&quot;: 0.5,
+    &quot;tested&quot;: 2
+  }
+}</code></pre><h3>Commande locale</h3><pre><code>python -X utf8 run.py test_summary resources/trustly-prompt-evaluation/exemple-fictif.json</code></pre><p><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/trustly-prompt-evaluation/exemple-fictif.json">Télécharger cette entrée JSON</a> · <a href="https://github.com/vocalisia/outils-pratiques/tree/main/resources/trustly-prompt-evaluation">Notice et fichiers sources</a></p></details><p><a href="#catalogue">Retour au catalogue</a></p></section><section id="trustrewiews-preuves" aria-labelledby="heading-trustrewiews-preuves"><h2 id="heading-trustrewiews-preuves">Preuves utiles pour comparer des entreprises</h2><p>Distinguer une déclaration commerciale, une preuve consultée et une question non résolue.</p><p><strong>Limite :</strong> <span>Le registre ne crée pas d&#x27;avis, de note agrégée ou de recommandation d&#x27;entreprise. VERIFIED signifie seulement que l&#x27;utilisateur a consulté sa preuve.</span></p><p>Site associé : <a href="https://trustrewiews.ch/">trustrewiews.ch</a>. Ressource proposée dans le cadre de son portefeuille éditorial.</p><p class="downloads"><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/trustrewiews-preuves/modele.xlsx">Journal Excel</a> · <a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/trustrewiews-preuves/trame.csv">Trame CSV</a> · <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRcG5ug4OJIDQT9zeyfTrtoWJYnoDEz2D_SBlfUr1NvJTGu7Ng8-WUttrtO5hpwLNr0EtpvKrj7Znwk/pubhtml?gid=754952780&amp;single=true">Version Google Sheets</a></p><details><summary>Champs du journal et exemple reproductible</summary><ul><li>Entreprise dans copie privée</li><li>Critère</li><li>Déclaration reçue</li><li>Source indépendante éventuelle</li><li>Date de la preuve</li><li>État VERIFIED / MISSING / OUTDATED</li><li>Question ouverte</li></ul><h3>Entrée fictive</h3><pre><code>{
+  &quot;records&quot;: [
+    {
+      &quot;id&quot;: &quot;identite&quot;,
+      &quot;state&quot;: &quot;VERIFIED&quot;
+    },
+    {
+      &quot;id&quot;: &quot;reference-chantier&quot;,
+      &quot;state&quot;: &quot;MISSING&quot;
+    },
+    {
+      &quot;id&quot;: &quot;avis&quot;,
+      &quot;state&quot;: &quot;OUTDATED&quot;
+    }
+  ]
+}</code></pre><h3>Résultat de cet exemple</h3><pre><code>{
+  &quot;engine&quot;: &quot;evidence_summary&quot;,
+  &quot;example_type&quot;: &quot;FICTIONAL_INPUTS_COMPUTED_OUTPUT&quot;,
+  &quot;output&quot;: {
+    &quot;counts&quot;: {
+      &quot;MISSING&quot;: 1,
+      &quot;OUTDATED&quot;: 1,
+      &quot;VERIFIED&quot;: 1
+    },
+    &quot;limitation&quot;: &quot;VERIFIED is the user&#x27;s declared state; this tool does not verify a source.&quot;,
+    &quot;needs_review&quot;: 2
+  }
+}</code></pre><h3>Commande locale</h3><pre><code>python -X utf8 run.py evidence_summary resources/trustrewiews-preuves/exemple-fictif.json</code></pre><p><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/trustrewiews-preuves/exemple-fictif.json">Télécharger cette entrée JSON</a> · <a href="https://github.com/vocalisia/outils-pratiques/tree/main/resources/trustrewiews-preuves">Notice et fichiers sources</a></p></details><p><a href="#catalogue">Retour au catalogue</a></p></section><section id="vocalis-org-passation" aria-labelledby="heading-vocalis-org-passation"><h2 id="heading-vocalis-org-passation">Recette de transfert d&#x27;un agent vocal vers un humain</h2><p>Vérifier la reprise humaine quand l&#x27;appelant la demande ou que l&#x27;agent ne peut pas poursuivre.</p><p><strong>Limite :</strong> <span>Aucun appel n&#x27;est effectué et aucun audio client n&#x27;est inclus. Un test fictif ne prouve pas un fonctionnement en production.</span></p><p>Site associé : <a href="https://vocalis-ai.org/">vocalis-ai.org</a>. Ressource proposée dans le cadre de son portefeuille éditorial.</p><p class="downloads"><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/vocalis-org-passation/modele.xlsx">Journal Excel</a> · <a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/vocalis-org-passation/trame.csv">Trame CSV</a> · <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRcG5ug4OJIDQT9zeyfTrtoWJYnoDEz2D_SBlfUr1NvJTGu7Ng8-WUttrtO5hpwLNr0EtpvKrj7Znwk/pubhtml?gid=717169181&amp;single=true">Version Google Sheets</a></p><details><summary>Champs du journal et exemple reproductible</summary><ul><li>Scénario de transfert</li><li>Motif</li><li>Contexte minimal attendu</li><li>Destinataire prévu</li><li>Observation du test</li><li>Statut PASS / FAIL / NOT_RUN</li><li>Trace autorisée</li></ul><h3>Entrée fictive</h3><pre><code>{
+  &quot;cases&quot;: [
+    {
+      &quot;id&quot;: &quot;humain-demande&quot;,
+      &quot;status&quot;: &quot;PASS&quot;
+    },
+    {
+      &quot;id&quot;: &quot;outil-indisponible&quot;,
+      &quot;status&quot;: &quot;FAIL&quot;
+    },
+    {
+      &quot;id&quot;: &quot;appel-hors-horaires&quot;,
+      &quot;status&quot;: &quot;NOT_RUN&quot;
+    }
+  ]
+}</code></pre><h3>Résultat de cet exemple</h3><pre><code>{
+  &quot;engine&quot;: &quot;test_summary&quot;,
+  &quot;example_type&quot;: &quot;FICTIONAL_INPUTS_COMPUTED_OUTPUT&quot;,
+  &quot;output&quot;: {
+    &quot;counts&quot;: {
+      &quot;FAIL&quot;: 1,
+      &quot;NOT_RUN&quot;: 1,
+      &quot;PASS&quot;: 1
+    },
+    &quot;limitation&quot;: &quot;Counts of supplied records, not independently observed product performance.&quot;,
+    &quot;pass_fraction_of_run_cases&quot;: 0.5,
+    &quot;tested&quot;: 2
+  }
+}</code></pre><h3>Commande locale</h3><pre><code>python -X utf8 run.py test_summary resources/vocalis-org-passation/exemple-fictif.json</code></pre><p><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/vocalis-org-passation/exemple-fictif.json">Télécharger cette entrée JSON</a> · <a href="https://github.com/vocalisia/outils-pratiques/tree/main/resources/vocalis-org-passation">Notice et fichiers sources</a></p></details><p><a href="#catalogue">Retour au catalogue</a></p></section><section id="vocalis-blog-preuves" aria-labelledby="heading-vocalis-blog-preuves"><h2 id="heading-vocalis-blog-preuves">Registre de preuves d&#x27;une démonstration vocale</h2><p>Relier une affirmation à un extrait réellement examiné au lieu de transformer une démonstration en résultat général.</p><p><strong>Limite :</strong> <span>Le registre ne contient aucune observation audiovisuelle réelle préremplie. La vérification d&#x27;un extrait ne vaut pas revue complète d&#x27;un enregistrement.</span></p><p>Site associé : <a href="https://vocalis.blog/">vocalis.blog</a>. Ressource proposée dans le cadre de son portefeuille éditorial.</p><p class="downloads"><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/vocalis-blog-preuves/modele.xlsx">Journal Excel</a> · <a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/vocalis-blog-preuves/trame.csv">Trame CSV</a> · <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRcG5ug4OJIDQT9zeyfTrtoWJYnoDEz2D_SBlfUr1NvJTGu7Ng8-WUttrtO5hpwLNr0EtpvKrj7Znwk/pubhtml?gid=1480783544&amp;single=true">Version Google Sheets</a></p><details><summary>Champs du journal et exemple reproductible</summary><ul><li>Affirmation examinée</li><li>Support et version</li><li>Horodatage</li><li>Ce qui a été entendu ou vu</li><li>Déclaration ou observation</li><li>État VERIFIED / MISSING / OUTDATED</li><li>Limite</li></ul><h3>Entrée fictive</h3><pre><code>{
+  &quot;records&quot;: [
+    {
+      &quot;id&quot;: &quot;sequence-a&quot;,
+      &quot;state&quot;: &quot;VERIFIED&quot;
+    },
+    {
+      &quot;id&quot;: &quot;sequence-b&quot;,
+      &quot;state&quot;: &quot;MISSING&quot;
+    }
+  ]
+}</code></pre><h3>Résultat de cet exemple</h3><pre><code>{
+  &quot;engine&quot;: &quot;evidence_summary&quot;,
+  &quot;example_type&quot;: &quot;FICTIONAL_INPUTS_COMPUTED_OUTPUT&quot;,
+  &quot;output&quot;: {
+    &quot;counts&quot;: {
+      &quot;MISSING&quot;: 1,
+      &quot;OUTDATED&quot;: 0,
+      &quot;VERIFIED&quot;: 1
+    },
+    &quot;limitation&quot;: &quot;VERIFIED is the user&#x27;s declared state; this tool does not verify a source.&quot;,
+    &quot;needs_review&quot;: 1
+  }
+}</code></pre><h3>Commande locale</h3><pre><code>python -X utf8 run.py evidence_summary resources/vocalis-blog-preuves/exemple-fictif.json</code></pre><p><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/vocalis-blog-preuves/exemple-fictif.json">Télécharger cette entrée JSON</a> · <a href="https://github.com/vocalisia/outils-pratiques/tree/main/resources/vocalis-blog-preuves">Notice et fichiers sources</a></p></details><p><a href="#catalogue">Retour au catalogue</a></p></section><section id="vocalis-pro-accueil" aria-labelledby="heading-vocalis-pro-accueil"><h2 id="heading-vocalis-pro-accueil">Recette d&#x27;un accueil téléphonique automatisé</h2><p>Tester compréhension, routage et interruptions sur des phrases de démonstration avant un essai autorisé.</p><p><strong>Limite :</strong> <span>Les cas ne mesurent pas la précision réelle du service et n&#x27;autorisent ni appel ni enregistrement de tiers.</span></p><p>Site associé : <a href="https://vocalis.pro/">vocalis.pro</a>. Ressource proposée dans le cadre de son portefeuille éditorial.</p><p class="downloads"><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/vocalis-pro-accueil/modele.xlsx">Journal Excel</a> · <a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/vocalis-pro-accueil/trame.csv">Trame CSV</a> · <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRcG5ug4OJIDQT9zeyfTrtoWJYnoDEz2D_SBlfUr1NvJTGu7Ng8-WUttrtO5hpwLNr0EtpvKrj7Znwk/pubhtml?gid=655788512&amp;single=true">Version Google Sheets</a></p><details><summary>Champs du journal et exemple reproductible</summary><ul><li>Intention testée</li><li>Phrase fictive</li><li>Réponse attendue</li><li>Route attendue</li><li>Observation</li><li>Statut PASS / FAIL / NOT_RUN</li><li>Correction</li><li>Date et version</li></ul><h3>Entrée fictive</h3><pre><code>{
+  &quot;cases&quot;: [
+    {
+      &quot;id&quot;: &quot;intention-simple&quot;,
+      &quot;status&quot;: &quot;PASS&quot;
+    },
+    {
+      &quot;id&quot;: &quot;nom-ambigue&quot;,
+      &quot;status&quot;: &quot;FAIL&quot;
+    },
+    {
+      &quot;id&quot;: &quot;interruption&quot;,
+      &quot;status&quot;: &quot;NOT_RUN&quot;
+    }
+  ]
+}</code></pre><h3>Résultat de cet exemple</h3><pre><code>{
+  &quot;engine&quot;: &quot;test_summary&quot;,
+  &quot;example_type&quot;: &quot;FICTIONAL_INPUTS_COMPUTED_OUTPUT&quot;,
+  &quot;output&quot;: {
+    &quot;counts&quot;: {
+      &quot;FAIL&quot;: 1,
+      &quot;NOT_RUN&quot;: 1,
+      &quot;PASS&quot;: 1
+    },
+    &quot;limitation&quot;: &quot;Counts of supplied records, not independently observed product performance.&quot;,
+    &quot;pass_fraction_of_run_cases&quot;: 0.5,
+    &quot;tested&quot;: 2
+  }
+}</code></pre><h3>Commande locale</h3><pre><code>python -X utf8 run.py test_summary resources/vocalis-pro-accueil/exemple-fictif.json</code></pre><p><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/vocalis-pro-accueil/exemple-fictif.json">Télécharger cette entrée JSON</a> · <a href="https://github.com/vocalisia/outils-pratiques/tree/main/resources/vocalis-pro-accueil">Notice et fichiers sources</a></p></details><p><a href="#catalogue">Retour au catalogue</a></p></section><section id="glowafter35-labels" aria-labelledby="heading-glowafter35-labels"><h2 id="heading-glowafter35-labels" lang="en">Cosmetic label and ingredient evidence register</h2><p lang="en">Keep the exact label wording and its source separate from a marketing interpretation.</p><p><strong>Limite :</strong> <span lang="en">No ingredient list, efficacy, medical benefit or safety assessment is supplied. Ingredient naming requirements depend on the market.</span></p><p>Site associé : <a href="https://woman-cute.com/">woman-cute.com</a>. Ressource proposée dans le cadre de son portefeuille éditorial.</p><p class="downloads"><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/glowafter35-labels/modele.xlsx">Journal Excel</a> · <a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/glowafter35-labels/trame.csv">Trame CSV</a> · <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRcG5ug4OJIDQT9zeyfTrtoWJYnoDEz2D_SBlfUr1NvJTGu7Ng8-WUttrtO5hpwLNr0EtpvKrj7Znwk/pubhtml?gid=1867291682&amp;single=true">Version Google Sheets</a></p><details><summary>Champs du journal et exemple reproductible</summary><ul><li>Product reference</li><li>Exact label wording</li><li>Ingredient name as printed</li><li>Manufacturer source</li><li>Market concerned</li><li>Checked date</li><li>State VERIFIED / MISSING / OUTDATED</li><li>Unresolved question</li></ul><h3>Entrée fictive</h3><pre><code>{
+  &quot;records&quot;: [
+    {
+      &quot;id&quot;: &quot;ingredient-list&quot;,
+      &quot;state&quot;: &quot;VERIFIED&quot;
+    },
+    {
+      &quot;id&quot;: &quot;marketing-claim&quot;,
+      &quot;state&quot;: &quot;MISSING&quot;
+    }
+  ]
+}</code></pre><h3>Résultat de cet exemple</h3><pre><code>{
+  &quot;engine&quot;: &quot;evidence_summary&quot;,
+  &quot;example_type&quot;: &quot;FICTIONAL_INPUTS_COMPUTED_OUTPUT&quot;,
+  &quot;output&quot;: {
+    &quot;counts&quot;: {
+      &quot;MISSING&quot;: 1,
+      &quot;OUTDATED&quot;: 0,
+      &quot;VERIFIED&quot;: 1
+    },
+    &quot;limitation&quot;: &quot;VERIFIED is the user&#x27;s declared state; this tool does not verify a source.&quot;,
+    &quot;needs_review&quot;: 1
+  }
+}</code></pre><h3>Commande locale</h3><pre><code>python -X utf8 run.py evidence_summary resources/glowafter35-labels/exemple-fictif.json</code></pre><p><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/glowafter35-labels/exemple-fictif.json">Télécharger cette entrée JSON</a> · <a href="https://github.com/vocalisia/outils-pratiques/tree/main/resources/glowafter35-labels">Notice et fichiers sources</a></p></details><p>Référence pour le contexte : <a href="https://www.fda.gov/cosmetics/cosmetics-labeling/cosmetic-ingredient-names">consulter la source institutionnelle</a>.</p><p><a href="#catalogue">Retour au catalogue</a></p></section><section id="facture-solde" aria-labelledby="heading-facture-solde"><h2 id="heading-facture-solde">Solde arithmétique d&#x27;une facture et de ses paiements</h2><p>Rapprocher des paiements d&#x27;une facture en séparant solde restant et éventuel trop-perçu.</p><p><strong>Limite :</strong> <span>Aucun intérêt, indemnité, frais de justice, prescription ou droit au recouvrement n&#x27;est calculé.</span></p><p>Site associé : <a href="https://xn--factureimpaye-mhb.fr/">xn--factureimpaye-mhb.fr</a>. Ressource proposée dans le cadre de son portefeuille éditorial.</p><p class="downloads"><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/facture-solde/modele.xlsx">Journal Excel</a> · <a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/facture-solde/trame.csv">Trame CSV</a> · <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRcG5ug4OJIDQT9zeyfTrtoWJYnoDEz2D_SBlfUr1NvJTGu7Ng8-WUttrtO5hpwLNr0EtpvKrj7Znwk/pubhtml?gid=1428991662&amp;single=true">Version Google Sheets</a></p><details><summary>Champs du journal et exemple reproductible</summary><ul><li>Référence anonymisée</li><li>Montant de facture</li><li>Paiement reçu</li><li>Date réelle</li><li>Justificatif privé</li><li>Solde à rapprocher</li><li>Litige ou question à traiter</li></ul><h3>Entrée fictive</h3><pre><code>{
+  &quot;invoice&quot;: 1200,
+  &quot;payments&quot;: [
+    300,
+    450
+  ]
+}</code></pre><h3>Résultat de cet exemple</h3><pre><code>{
+  &quot;engine&quot;: &quot;invoice_balance&quot;,
+  &quot;example_type&quot;: &quot;FICTIONAL_INPUTS_COMPUTED_OUTPUT&quot;,
+  &quot;output&quot;: {
+    &quot;outstanding&quot;: 450.0,
+    &quot;overpayment&quot;: 0,
+    &quot;paid&quot;: 750.0
+  }
+}</code></pre><h3>Commande locale</h3><pre><code>python -X utf8 run.py invoice_balance resources/facture-solde/exemple-fictif.json</code></pre><p><a href="https://github.com/vocalisia/outils-pratiques/raw/refs/heads/main/resources/facture-solde/exemple-fictif.json">Télécharger cette entrée JSON</a> · <a href="https://github.com/vocalisia/outils-pratiques/tree/main/resources/facture-solde">Notice et fichiers sources</a></p></details><p><a href="#catalogue">Retour au catalogue</a></p></section></main><footer><p>Documentation générée depuis les scénarios fournis avec le projet. Chaque exemple peut être recalculé avec le code publié. <a href="https://github.com/vocalisia/outils-pratiques/issues">Signaler une erreur de documentation</a>.</p></footer></body></html>

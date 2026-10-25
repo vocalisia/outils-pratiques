@@ -4,6 +4,8 @@ Des outils pour vérifier un calcul ou structurer des observations avant une dé
 
 **[Télécharger l'ensemble](https://github.com/vocalisia/outils-pratiques/releases/latest/download/outils-pratiques.zip)** · [Parcourir les ressources](#ressources)
 
+[Lire la documentation et les exemples en ligne](https://vocalisia.github.io/outils-pratiques/)
+
 ## Choisir un format
 
 - **Excel / Sheets** : téléchargez le fichier `modele.xlsx` de la ressource, ou importez `trame.csv` dans une copie privée. Les feuilles servent de journal de saisie ; elles ne recalculent pas automatiquement les résultats.
